@@ -3,10 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HELD & BOUND — Build Your Own Talisman</title>
+<title>HELD & BOUND — Made with Intention — Launch</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
+/* ========== EASY TO EDIT COLORS ========== */
 :root{
   --paper:#F9F5EF; --paper2:#F3EDE3; --paper3:#EEE7DB;
   --ink:#2B2520; --ink2:#5A524A;
@@ -17,164 +18,197 @@
 body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:20;background:rgba(249,245,239,0.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
+header{position:sticky;top:0;z-index:20;background:rgba(249,245,239,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
 .head{display:flex;justify-content:space-between;align-items:center;padding:16px 0}
 .logo{height:52px}
 .tagline{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--ink2);opacity:0.7}
-.hero{padding:72px 0 36px;text-align:center;max-width:700px;margin:0 auto}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.2vw,56px);line-height:0.95;font-weight:500;margin:0 0 14px;letter-spacing:-0.02em}
-.hero p{font-size:15px;color:var(--ink2);max-width:52ch;margin:0 auto}
+.hero{padding:64px 0 24px;text-align:center;max-width:760px;margin:0 auto}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.2vw,54px);line-height:0.95;font-weight:500;margin:0 0 18px;letter-spacing:-0.02em}
+.hero p{font-size:15px;color:var(--ink2);max-width:58ch;margin:0 auto 12px}
 .divider{width:32px;height:1px;background:var(--clay);margin:20px auto;opacity:0.8}
-.builder-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:28px;align-items:start}
+.kicker{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:6px}
+.intention{margin:36px auto 40px;padding:28px 24px;border:1px solid var(--line);border-radius:20px;background:#fff;text-align:left;max-width:760px}
+.intention h2{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;margin:0 0 12px}
+.intention p{font-size:13.5px;color:var(--ink2);margin:8px 0;line-height:1.6}
+.intention ul{margin:8px 0 8px 18px;padding:0;font-size:13px;color:var(--ink2)}
+.intention li{margin:4px 0}
+.addon{margin-top:18px;padding:18px;border:1px dashed var(--line);border-radius:14px;background:var(--paper2)}
+.addon h3{font-family:'Cormorant Garamond',serif;font-size:18px;margin:0 0 6px}
+.small{font-size:11px;color:var(--ink2);opacity:0.85;line-height:1.5}
+.builder-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:28px;align-items:start;padding-bottom:24px}
 @media(max-width:980px){.builder-grid{grid-template-columns:1fr}}
-.step{margin:0 0 22px;padding:24px 22px;border:1px solid var(--line);background:rgba(255,255,255,0.6);border-radius:18px}
+.step{margin:0 0 22px;padding:24px 22px;border:1px solid var(--line);background:rgba(255,255,255,0.7);border-radius:18px}
 .step.active{border-color:rgba(196,139,95,0.35);background:#fff;box-shadow:0 8px 30px rgba(43,37,32,0.06)}
 .step-head{display:flex;gap:12px;align-items:center;margin-bottom:14px}
 .step-num{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:11px;background:var(--paper3);border:1px solid var(--line);color:var(--ink2)}
 .step.active .step-num{background:var(--ink);color:var(--paper)}
 .step h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:500;margin:0}
 .step p.sub{font-size:12px;color:var(--ink2);margin:2px 0 0}
-.grid{display:grid;gap:12px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+.grid{display:grid;gap:12px}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}.grid-2{grid-template-columns:repeat(2,1fr)}
 @media(max-width:900px){.grid-3,.grid-4{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.grid-3,.grid-4{grid-template-columns:1fr}}
-.card{border:1px solid var(--line);background:var(--paper2);padding:12px;border-radius:16px;cursor:pointer;transition:.2s}
+@media(max-width:560px){.grid-3,.grid-4,.grid-2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);background:var(--paper2);padding:12px;border-radius:16px;cursor:pointer;transition:.2s;position:relative}
 .card:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(43,37,32,0.06)}
 .card.selected{border-color:var(--clay);background:#fff;box-shadow:0 8px 28px rgba(196,139,95,0.18)}
-.card .img{aspect-ratio:1;background:#EDE5D8;border-radius:12px;overflow:hidden}
+.card .img{aspect-ratio:1;background:#EDE5D8;border-radius:12px;overflow:hidden;border:1px solid var(--line2)}
 .card b{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;display:block;margin:10px 0 2px}
 .choice-desc{font-size:11.5px;color:var(--ink2);opacity:0.85;line-height:1.4}
-.small{font-size:10.5px;color:var(--ink2);margin-top:8px;opacity:0.8}
+.swatch{width:18px;height:18px;border-radius:50%;border:1px solid var(--line);display:inline-block;vertical-align:middle;margin-right:6px}
 .summary{position:sticky;top:88px;border:1px solid var(--ink);border-radius:20px;padding:20px;background:#fff;box-shadow:0 12px 40px rgba(43,37,32,0.08)}
 .price-big{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;margin-top:6px}
 .btn{display:block;width:100%;padding:14px 20px;border-radius:999px;background:var(--ink);color:var(--paper);border:1px solid var(--ink);text-align:center;text-decoration:none;font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:500;cursor:pointer}
-.btn:disabled{opacity:0.35;pointer-events:none}
-input[type=text]{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper2);font-size:14px}
+.btn.ghost{background:transparent;color:var(--ink)}
 .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:24px}
 @media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
 .gallery .gimg{aspect-ratio:1;border-radius:14px;overflow:hidden;border:1px solid var(--line2);background:var(--paper2)}
 .contact{margin:48px 0 0;padding:48px 24px;text-align:center;border:1px solid var(--line);border-radius:20px;background:#fff}
-.herb-opt{font-size:12px;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line2);border-radius:10px;background:var(--paper2);cursor:pointer}
-.herb-opt:has(input:checked){background:#fff;border-color:var(--clay)}
-.kicker{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:600;margin-bottom:6px}
+input[type=text], textarea{width:100%;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--paper2);font-size:14px;font-family:Inter,sans-serif}
+textarea{min-height:96px;resize:vertical}
+.checkbox{ display:flex; gap:10px; align-items:flex-start; padding:12px; border:1px solid var(--line); border-radius:12px; background:var(--paper2); cursor:pointer; }
+.checkbox input{margin-top:3px}
 </style>
 </head>
 <body>
 <header><div class="wrap head">
 <img class="logo" src="H_B_Logo.png" alt="HELD & BOUND">
-<div class="tagline">Small-batch • Herb-bound • Made with intention</div>
+<div class="tagline">Made with intention • Small-batch</div>
 </div></header>
 
 <main class="wrap">
+
+<!-- HERO + MADE WITH INTENTION — EDIT TEXT HERE -->
 <section class="hero">
-<div class="kicker">Hand-formed • Held with intention</div>
-<h1>Build your own talisman, held with intention.</h1>
-<p>Choose the form, the clay, the herb blend and the mark. Same price for all blends — sacred, not fussy.</p>
+<div class="kicker">Made with intention</div>
+<h1>Every piece is made slowly, by hand, with a specific intention in mind.</h1>
 <div class="divider"></div>
 </section>
 
-<section style="padding:0 0 32px">
-<div class="kicker" style="text-align:center">A little gallery — recent small batches</div>
-<div class="gallery">
-<div class="gimg"><img src="algiz-protection-talisman-premium-lavender-rosemary-uk-42.jpg" alt="Algiz premium"></div>
-<div class="gimg"><img src="algiz-pendant-terracotta-orange-6cm-protection.jpg" alt="Pendant"></div>
-<div class="gimg"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging"></div>
-<div class="gimg"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune set"></div>
-<div class="gimg"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Worry stone"></div>
-<div class="gimg"><img src="algiz-feathered-pendant-terracotta-detailed.jpg" alt="Feathered"></div>
-<div class="gimg"><img src="algiz-wreath-ward-braided-edge-hb-stamp.jpg" alt="Wreath"></div>
-<div class="gimg"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Tile"></div>
+<section class="intention">
+<h2>Made with intention</h2>
+<p>Every Held & Bound piece is made slowly, by hand, with a specific intention in mind.</p>
+<p>The herbs, symbol and form are chosen deliberately, and each piece is finished with a simple blessing ritual before it leaves the studio.</p>
+<p>For customers who want something more personal, you can choose <b>Personal Attunement</b> at checkout.</p>
+<p>You may send:</p>
+<ul>
+<li>a photo</li>
+<li>a name</li>
+<li>a date of birth</li>
+<li>or simply a written intention</li>
+</ul>
+<p>Your piece will then be made and finished with that person or intention specifically in mind.</p>
+<p>Photos are optional and deleted after the attunement is complete.</p>
+
+<div class="addon">
+<h3>Personal Attunement — +£18 / +$22</h3>
+<p class="small"><b>Includes:</b></p>
+<ul>
+<li>intention-led making</li>
+<li>candle blessing / attunement ritual</li>
+<li>optional photo, name or written intention</li>
+<li>personal focus placed on the piece before dispatch</li>
+</ul>
+<p class="small" style="margin-top:10px"><em>Attunement is offered as a personal ritual and symbolic practice. No specific outcome is guaranteed.</em></p>
 </div>
-<p class="small" style="text-align:center;margin-top:10px">Easy to edit: replace these 8 images with your own — just keep same filenames or change src.</p>
+</section>
+
+<!-- SIMPLE GALLERY FOR TRUST -->
+<section style="padding:0 0 32px">
+<div class="kicker" style="text-align:center">Recent small batches</div>
+<div class="gallery">
+<div class="gimg"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div>
+<div class="gimg"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging Charm"></div>
+<div class="gimg"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Held Stone"></div>
+<div class="gimg"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Botanical Tile"></div>
+</div>
 </section>
 
 <div class="builder-grid">
 <div>
 
+<!-- STEP 1: OBJECT — EDIT PRICES IN JS BELOW, NOT HERE -->
 <div class="step active" id="step1">
-<div class="step-head"><div class="step-num">1</div><div><h3>Choose the object</h3><p class="sub">What shape wants to be held</p></div></div>
+<div class="step-head"><div class="step-num">1</div><div><h3>Choose your object</h3><p class="sub">What shape wants to be held</p></div></div>
 <div class="grid grid-3" style="margin-top:14px">
-<div class="card" data-type="object" data-value="Rune Set"><div class="img"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div><b>Rune Set — 24 + 1</b><div class="choice-desc">Full Elder Futhark.</div><div class="small">From £27.99</div></div>
-<div class="card" data-type="object" data-value="Hanging Talisman"><div class="img"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging"></div><b>Hanging Talisman — 6cm</b><div class="choice-desc">Doorway ward.</div><div class="small">From £14.99</div></div>
-<div class="card" data-type="object" data-value="Worry Stone"><div class="img"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Worry"></div><b>Worry Stone — Oval</b><div class="choice-desc">Palm stone, grounding.</div><div class="small">From £9.99</div></div>
-<div class="card" data-type="object" data-value="Botanical Tile"><div class="img"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Tile"></div><b>Botanical Tile — 6cm</b><div class="choice-desc">Altar tile.</div><div class="small">From £14.99</div></div>
-<div class="card" data-type="object" data-value="Pendant"><div class="img"><img src="algiz-pendant-terracotta-orange-6cm-protection.jpg" alt="Pendant"></div><b>Pendant — 6cm</b><div class="choice-desc">Wearable.</div><div class="small">From £14.99</div></div>
-<div class="card" data-type="object" data-value="Keepsake"><div class="img"><img src="algiz-wreath-ward-braided-edge-hb-stamp.jpg" alt="Keepsake"></div><b>Keepsake</b><div class="choice-desc">Braided edge.</div><div class="small">From £19.99</div></div>
+<div class="card" data-type="object" data-value="Rune Set"><div class="img"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div><b>Rune Set</b><div class="choice-desc">24 + 1, full Elder Futhark.</div><div class="small">From £27.99</div></div>
+<div class="card" data-type="object" data-value="Hanging Charm"><div class="img"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging Charm"></div><b>Hanging Charm</b><div class="choice-desc">Doorway ward, jute cord.</div><div class="small">From £14.99</div></div>
+<div class="card" data-type="object" data-value="Held Stone"><div class="img"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Held Stone"></div><b>Held Stone</b><div class="choice-desc">Palm stone, grounding.</div><div class="small">From £9.99</div></div>
+<div class="card" data-type="object" data-value="Botanical Tile"><div class="img"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Botanical Tile"></div><b>Botanical Tile</b><div class="choice-desc">Altar tile, herb-bound.</div><div class="small">From £14.99</div></div>
+<div class="card" data-type="object" data-value="Pendant"><div class="img"><img src="algiz-pendant-terracotta-orange-6cm-protection.jpg" alt="Pendant"></div><b>Pendant</b><div class="choice-desc">Wearable or to hang.</div><div class="small">From £14.99</div></div>
+<div class="card" data-type="object" data-value="Keepsake"><div class="img"><img src="algiz-wreath-ward-braided-edge-hb-stamp.jpg" alt="Keepsake"></div><b>Keepsake</b><div class="choice-desc">Braided edge, memorials.</div><div class="small">From £19.99</div></div>
 </div>
 </div>
 
+<!-- STEP 2: MATERIAL — SINGLE FOR LAUNCH -->
 <div class="step" id="step2">
-<div class="step-head"><div class="step-num">2</div><div><h3>Choose the material</h3><p class="sub">How it feels in the hand</p></div></div>
+<div class="step-head"><div class="step-num">2</div><div><h3>Choose your material</h3><p class="sub">One material for launch — simple, fast</p></div></div>
 <div class="grid grid-3" style="margin-top:14px">
-<div class="card" data-type="material" data-value="Organic"><b>Organic — Ceramic-look</b><div class="choice-desc">Lighter, durable.</div><div class="small">Included</div></div>
-<div class="card" data-type="material" data-value="Light Clay"><b>Light Clay</b><div class="choice-desc">Soft white stoneware.</div><div class="small">Select object first</div></div>
-<div class="card" data-type="material" data-value="Terracotta"><b>Terracotta</b><div class="choice-desc">Warm orange, rustic.</div><div class="small">Select object first</div></div>
+<div class="card selected" data-type="material" data-value="Organic Hard Bake" data-price="0">
+<b>Organic Hard Bake</b>
+<div class="choice-desc">Lightweight, tactile, hand-formed botanical composite.</div>
+<div class="small">Included — launch material</div>
+</div>
 </div>
 </div>
 
+<!-- STEP 3: BLEND / COLOUR — 4 OPTIONS -->
 <div class="step" id="step3">
-<div class="step-head"><div class="step-num">3</div><div><h3>Choose the intention blend</h3><p class="sub">Same price, all blends — territory, not a list</p></div></div>
-<div class="grid grid-3" style="margin-top:14px">
-<div class="card" data-type="blend" data-value="Raw / Natural"><b>Raw / Natural</b><div class="choice-desc">No herbs, just clay. Pure.</div><div class="small">Same price</div></div>
-<div class="card" data-type="blend" data-value="Herbbound"><b>Herbbound</b><div class="choice-desc">Rosemary, basil, black pepper — grounding.</div></div>
-<div class="card" data-type="blend" data-value="Heartfire"><b>Heartfire</b><div class="choice-desc">Paprika, turmeric — warmth, courage.</div></div>
-<div class="card" data-type="blend" data-value="Quiet Abundance"><b>Quiet Abundance</b><div class="choice-desc">Lavender + prosperity — calm abundance.</div></div>
-<div class="card" data-type="blend" data-value="Keeper"><b>Keeper</b><div class="choice-desc">Rosemary, bay, black pepper — boundaries.</div></div>
-<div class="card" data-type="blend" data-value="Moonmilk"><b>Moonmilk</b><div class="choice-desc">Lavender, chamomile, salt — rest.</div></div>
-<div class="card" data-type="blend" data-value="Wildwood"><b>Wildwood</b><div class="choice-desc">Rosemary, thyme, sage — nature.</div></div>
-<div class="card" data-type="blend" data-value="Choose Your Own"><b>Choose Your Own</b><div class="choice-desc">Pick up to 3 herbs below.</div><div class="small">Same price</div></div>
-</div>
-
-<div id="customHerbPicker" style="display:none;margin-top:18px;padding:18px;border:1px dashed var(--line);border-radius:14px;background:rgba(255,255,255,0.7)">
-<div class="kicker">Pick up to 3 herbs — same price, no extra charge</div>
-<div class="grid grid-4" style="gap:8px;margin-top:8px">
-<label class="herb-opt"><input type="checkbox" value="Rosemary"> Rosemary</label>
-<label class="herb-opt"><input type="checkbox" value="Basil"> Basil</label>
-<label class="herb-opt"><input type="checkbox" value="Black Pepper"> Black Pepper</label>
-<label class="herb-opt"><input type="checkbox" value="Bay"> Bay</label>
-<label class="herb-opt"><input type="checkbox" value="Sage"> Sage</label>
-<label class="herb-opt"><input type="checkbox" value="Thyme"> Thyme</label>
-<label class="herb-opt"><input type="checkbox" value="Lavender"> Lavender</label>
-<label class="herb-opt"><input type="checkbox" value="Chamomile"> Chamomile</label>
-<label class="herb-opt"><input type="checkbox" value="Paprika"> Paprika</label>
-<label class="herb-opt"><input type="checkbox" value="Turmeric"> Turmeric</label>
-<label class="herb-opt"><input type="checkbox" value="Cinnamon"> Cinnamon</label>
-<label class="herb-opt"><input type="checkbox" value="Clove"> Clove</label>
-</div>
-<div class="small" id="herbCount" style="margin-top:10px;color:var(--sage)">Pick 1–3 herbs.</div>
+<div class="step-head"><div class="step-num">3</div><div><h3>Choose your blend / colour</h3><p class="sub">Each blend changes meaning + natural colour. Not painted.</p></div></div>
+<p class="small" style="margin:0 0 10px">Colours are created through the material and botanical blend, not painted on.</p>
+<div class="grid grid-2" style="margin-top:14px">
+<div class="card" data-type="blend" data-value="RAW"><b><span class="swatch" style="background:#F5F1E8"></span>RAW — Cream / Natural</b><div class="choice-desc">No added herbs or pigment. Pure, quiet.</div><div class="small">Same price</div></div>
+<div class="card" data-type="blend" data-value="MOONMILK"><b><span class="swatch" style="background:#F6F0E6"></span>MOONMILK — Soft cream</b><div class="choice-desc">Lavender • Chamomile • Fine Salt<br>Calm • Rest • Intuition</div><div class="small">Same price</div></div>
+<div class="card" data-type="blend" data-value="HEARTFIRE"><b><span class="swatch" style="background:#C46A3A"></span>HEARTFIRE — Paprika orange / terracotta</b><div class="choice-desc">Paprika • Turmeric<br>Warmth • Courage • Vitality</div><div class="small">Same price</div></div>
+<div class="card" data-type="blend" data-value="CHARCOAL"><b><span class="swatch" style="background:#2B2B2B"></span>CHARCOAL — Deep black / smoke</b><div class="choice-desc">Charcoal blend<br>Grounding • Protection • Strength</div><div class="small">Same price</div></div>
 </div>
 </div>
 
+<!-- STEP 4: SYMBOL — 6 OPTIONS -->
 <div class="step" id="step4">
-<div class="step-head"><div class="step-num">4</div><div><h3>Choose the symbol</h3><p class="sub">What mark is carved while soft</p></div></div>
-<div class="grid grid-4" style="margin-top:14px">
-<div class="card" data-type="symbol" data-value="Algiz" data-price="0"><b>Algiz ᛉ</b><div class="small">Included</div></div>
-<div class="card" data-type="symbol" data-value="Berkano" data-price="0"><b>Berkano ᛒ</b><div class="small">Included</div></div>
-<div class="card" data-type="symbol" data-value="Raidho" data-price="0"><b>Raidho ᚱ</b><div class="small">Included</div></div>
-<div class="card" data-type="symbol" data-value="Cross" data-price="0"><b>Cross</b><div class="small">Included</div></div>
-<div class="card" data-type="symbol" data-value="Initials" data-price="5"><b>Initials</b><div class="small">+£5</div></div>
-<div class="card" data-type="symbol" data-value="Custom Rune" data-price="5"><b>Custom Rune</b><div class="small">+£5</div></div>
-<div class="card" data-type="symbol" data-value="Memorial" data-price="8"><b>Memorial</b><div class="small">+£8</div></div>
-<div class="card" data-type="symbol" data-value="Custom Sigil" data-price="12"><b>Custom Sigil</b><div class="small">+£12</div></div>
+<div class="step-head"><div class="step-num">4</div><div><h3>Choose your symbol</h3><p class="sub">Carved while soft</p></div></div>
+<div class="grid grid-3" style="margin-top:14px">
+<div class="card" data-type="symbol" data-value="Algiz" data-price="0"><b>Algiz ᛉ</b><div class="choice-desc">Protection.</div><div class="small">Included</div></div>
+<div class="card" data-type="symbol" data-value="Berkano" data-price="0"><b>Berkano ᛒ</b><div class="choice-desc">Growth.</div><div class="small">Included</div></div>
+<div class="card" data-type="symbol" data-value="Raidho" data-price="0"><b>Raidho ᚱ</b><div class="choice-desc">Journey.</div><div class="small">Included</div></div>
+<div class="card" data-type="symbol" data-value="No symbol" data-price="0"><b>No symbol</b><div class="choice-desc">Plain, unmarked.</div><div class="small">Included</div></div>
+<div class="card" data-type="symbol" data-value="Initial" data-price="5"><b>Initial</b><div class="choice-desc">1–3 letters.</div><div class="small">+£5</div></div>
+<div class="card" data-type="symbol" data-value="Custom sigil" data-price="12"><b>Custom sigil</b><div class="choice-desc">Your design.</div><div class="small">+£12</div></div>
 </div>
 </div>
 
+<!-- STEP 5: PERSONAL ATTUNEMENT ADD-ON -->
 <div class="step" id="step5">
-<div class="step-head"><div class="step-num">5</div><div><h3>Personalization</h3><p class="sub">Optional</p></div></div>
-<input type="text" id="personalization" placeholder="e.g. A + J 2024">
+<div class="step-head"><div class="step-num">5</div><div><h3>Personal Attunement — optional add-on</h3><p class="sub">+£18 / +$22</p></div></div>
+<label class="checkbox" id="attunementBox">
+<input type="checkbox" id="attunementCheck">
+<div>
+<b>Yes, add Personal Attunement +£18</b>
+<div class="small">Intention-led making • candle blessing • optional photo/name/intention • personal focus before dispatch. Photos deleted after attunement. <em>Offered as personal ritual — no specific outcome guaranteed.</em></div>
+</div>
+</label>
+<div id="attunementFields" style="display:none;margin-top:12px">
+<textarea id="attunementText" placeholder="Write name, date of birth, or intention here. e.g. For Maya — 14.06.2020 — protection for new home. Photo can be sent via Instagram after checkout."></textarea>
+<p class="small" style="margin-top:8px">If sending a photo, DM it to @heldandbound after checkout with your order name.</p>
+</div>
+</div>
+
+<!-- STEP 6: PERSONALIZATION -->
+<div class="step" id="step6">
+<div class="step-head"><div class="step-num">6</div><div><h3>Personalization (if you chose Initial / Sigil)</h3><p class="sub">Optional</p></div></div>
+<input type="text" id="personalization" placeholder="e.g. A, AM, J+L, or describe sigil">
 </div>
 
 </div>
 
 <div>
 <div class="summary">
-<div class="kicker">Your selection</div>
-<h3>Begin to build</h3>
-<div id="summaryLines" class="small" style="font-size:12.5px;line-height:1.6">Choose an object to begin.</div>
+<div class="kicker">Your selection — launch simplified</div>
+<h3 id="summaryTitle">Begin to build</h3>
+<div id="summaryLines" class="small" style="font-size:12.5px;line-height:1.6">Choose object to begin. Moon Phase removed. One material for launch.</div>
 <hr style="border:none;border-top:1px solid var(--line);margin:16px 0">
 <div class="price-big" id="totalPrice">£0.00</div>
-<div class="small" id="stockInfo" style="color:var(--sage)"></div>
+<div class="small" id="stockInfo" style="color:var(--sage)">In stock — Organic Hard Bake • Ships 2–3 days</div>
 <div style="margin-top:18px"><a id="stripeButton" class="btn" href="#">Select options to continue</a>
-<p class="small" style="text-align:center;margin-top:10px">Secure Stripe checkout • UK from £4.50 • US from £14</p>
+<p class="small" style="text-align:center;margin-top:10px">Secure Stripe checkout • UK from £4.50 • US from £14<br>Attunement +£18 if selected</p>
 </div>
 </div>
 </div>
@@ -184,90 +218,99 @@ input[type=text]{width:100%;padding:14px 16px;border:1px solid var(--line);borde
 <div class="contact">
 <div class="kicker">Something different in mind?</div>
 <h2 style="font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:500;margin:8px 0">Have something different in mind?</h2>
-<p class="small" style="max-width:52ch;margin:0 auto 18px">A memorial piece with ashes or baby hair, a custom sigil, a larger ceremonial set — tell me what you're holding and we'll make it together.</p>
+<p class="small" style="max-width:52ch;margin:0 auto 18px">A memorial with ashes or baby hair, a larger set, a custom colour — message me and we'll make it together.</p>
 <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px">
 <a class="btn" style="width:auto;padding:12px 22px" href="https://ig.me/m/heldandbound" target="_blank">Message on Instagram</a>
-<a class="btn" style="width:auto;padding:12px 22px;background:transparent;color:var(--ink)" href="mailto:hello@humanlabofficial.com">Email hello@humanlabofficial.com</a>
+<a class="btn ghost" style="width:auto;padding:12px 22px" href="mailto:hello@humanlabofficial.com">Email hello@humanlabofficial.com</a>
 </div>
-<p class="small" style="margin-top:16px;opacity:0.6">I reply within a day — usually with a sketch and price.</p>
 </div>
 
-<footer style="padding:32px 0 48px;text-align:center;font-size:11px;color:var(--ink2);opacity:0.7;border-top:1px solid var(--line2);margin-top:24px">© HELD & BOUND • Small-batch • Herb-bound • Made with intention</footer>
+<footer style="padding:32px 0 48px;text-align:center;font-size:11px;color:var(--ink2);opacity:0.7;border-top:1px solid var(--line2);margin-top:24px">© HELD & BOUND • Small-batch • Herb-bound • Made with intention<br><span style="font-size:10px">Attunement is offered as a personal ritual and symbolic practice. No specific outcome is guaranteed.</span></footer>
 </main>
 
 <script>
+// ========== EDIT PRICES HERE ONLY — easy ==========
 const productPricing = {
-  "Rune Set": {organic: 27.99, real: 45.99},
-  "Hanging Talisman": {organic: 14.99, real: 19.99},
-  "Worry Stone": {organic: 9.99, real: 14.99},
-  "Botanical Tile": {organic: 14.99, real: 19.99},
-  "Pendant": {organic: 14.99, real: 19.99},
-  "Keepsake": {organic: 19.99, real: 26.99}
+  "Rune Set": 27.99,
+  "Hanging Charm": 14.99,
+  "Held Stone": 9.99,
+  "Botanical Tile": 14.99,
+  "Pendant": 14.99,
+  "Keepsake": 19.99
 };
-let state = {object:null, objectPrice:0, material:null, materialPrice:0, blend:null, symbol:null, symbolPrice:0, personalization:''};
-let customHerbs = [];
+const symbolPricing = {
+  "Algiz": 0,
+  "Berkano": 0,
+  "Raidho": 0,
+  "No symbol": 0,
+  "Initial": 5,
+  "Custom sigil": 12
+};
 
-function updateMaterialPricing(){
-  if(!state.object) return;
-  const p = productPricing[state.object];
-  if(!p) return;
-  document.querySelectorAll('.card[data-type="material"]').forEach(card=>{
-    const val = card.dataset.value;
-    const small = card.querySelector('.small');
-    if(val==='Organic'){ card.dataset.price=0; small.innerText='Included — base £'+p.organic.toFixed(2); }
-    else if(val==='Light Clay'){ const diff=p.real-p.organic; card.dataset.price=diff; small.innerText='+£'+diff.toFixed(2)+' — £'+p.real.toFixed(2); }
-    else if(val==='Terracotta'){ const diff=p.real-p.organic+2; const total=p.real+2; card.dataset.price=diff; small.innerText='+£'+diff.toFixed(2)+' — £'+total.toFixed(2); }
-  });
-}
+let state = {object:null, objectPrice:0, material:"Organic Hard Bake", materialPrice:0, blend:null, symbol:null, symbolPrice:0, attunement:false, personalization:'', attunementText:''};
+
 function updateSteps(){
   document.querySelectorAll('.step').forEach(s=>s.classList.remove('active'));
   if(!state.object) document.getElementById('step1').classList.add('active');
-  else if(!state.material) document.getElementById('step2').classList.add('active');
   else if(!state.blend) document.getElementById('step3').classList.add('active');
   else if(!state.symbol) document.getElementById('step4').classList.add('active');
   else document.getElementById('step5').classList.add('active');
 }
 function updateSummary(){
   let lines=[];
-  let blendDisplay=state.blend;
-  if(state.blend==='Choose Your Own' && customHerbs.length>0){ blendDisplay='Custom: '+customHerbs.join(', '); }
   if(state.object) lines.push('<b>'+state.object+'</b> — £'+state.objectPrice.toFixed(2));
-  if(state.material) lines.push(state.material + (state.materialPrice>0 ? ' +£'+state.materialPrice.toFixed(2) : ''));
-  if(state.blend) lines.push(blendDisplay);
+  lines.push('Organic Hard Bake — included');
+  if(state.blend) lines.push(state.blend);
   if(state.symbol) lines.push(state.symbol + (state.symbolPrice>0 ? ' +£'+state.symbolPrice : ''));
+  if(state.attunement) lines.push('<b>Personal Attunement +£18</b>');
   if(state.personalization) lines.push('<em>'+state.personalization+'</em>');
-  if(lines.length===0) lines.push('Choose an object to begin.');
+  if(state.attunementText) lines.push('<em>Attunement: '+state.attunementText.substring(0,80)+'</em>');
+  if(lines.length===1) lines.push('Choose object to begin.');
   document.getElementById('summaryLines').innerHTML=lines.join('<br>');
-  let total=state.objectPrice+state.materialPrice+state.symbolPrice;
-  document.getElementById('totalPrice').innerText=total>0 ? '£'+total.toFixed(2) : '£0.00';
+  let total=state.objectPrice + state.symbolPrice + (state.attunement ? 18 : 0);
+  document.getElementById('totalPrice').innerText= total>0 ? '£'+total.toFixed(2) : '£0.00';
+  let btn=document.getElementById('stripeButton');
+  if(!state.object || !state.blend || !state.symbol){
+    btn.innerText='Select all to continue'; btn.style.opacity='0.5';
+  } else {
+    btn.style.opacity='1';
+    btn.innerText='Buy now — £'+total.toFixed(2)+' →';
+    // Build Stripe ref
+    let desc = state.object + '|' + state.blend + '|' + state.symbol + '|' + (state.personalization||'') + '|Attunement:' + (state.attunement ? 'Yes-'+state.attunementText : 'No') + '|' + total;
+    btn.href='https://buy.stripe.com/your_link_here?ref='+encodeURIComponent(desc);
+  }
 }
-function updateCustomHerbDisplay(){
-  const picker=document.getElementById('customHerbPicker');
-  if(state.blend==='Choose Your Own'){ picker.style.display='block'; } else { picker.style.display='none'; }
-  const countEl=document.getElementById('herbCount');
-  if(customHerbs.length>0){ countEl.innerText=customHerbs.length+'/3 selected: '+customHerbs.join(', '); }
-  else { countEl.innerText='Pick 1–3 herbs — same price, no extra charge.'; }
-}
+
 document.querySelectorAll('.card[data-type]').forEach(card=>{
   card.addEventListener('click', ()=>{
     let type=card.dataset.type; let value=card.dataset.value; let price=parseFloat(card.dataset.price||0);
-    document.querySelectorAll('.card[data-type="'+type+'"]').forEach(c=>c.classList.remove('selected'));
-    card.classList.add('selected');
-    if(type==='object'){ state.object=value; const p=productPricing[value]; state.objectPrice=p ? p.organic : price; state.material=null; state.materialPrice=0; document.querySelectorAll('.card[data-type="material"]').forEach(c=>c.classList.remove('selected')); updateMaterialPricing(); }
-    if(type==='material'){ state.material=value; state.materialPrice=price; }
-    if(type==='blend'){ state.blend=value; if(value!=='Choose Your Own'){ customHerbs=[]; document.querySelectorAll('#customHerbPicker input').forEach(i=>i.checked=false); } updateCustomHerbDisplay(); }
-    if(type==='symbol'){ state.symbol=value; state.symbolPrice=price; }
+    // For single-select types
+    if(type!=='material'){
+      document.querySelectorAll('.card[data-type="'+type+'"]').forEach(c=>c.classList.remove('selected'));
+      card.classList.add('selected');
+    }
+    if(type==='object'){
+      state.object=value;
+      state.objectPrice=productPricing[value]||0;
+    }
+    if(type==='blend'){ state.blend=value; }
+    if(type==='symbol'){ state.symbol=value; state.symbolPrice=symbolPricing[value]||price; }
+    if(type==='material'){ state.material=value; }
     updateSteps(); updateSummary();
   });
 });
-document.querySelectorAll('#customHerbPicker input').forEach(input=>{
-  input.addEventListener('change', ()=>{
-    if(input.checked && customHerbs.length>=3){ input.checked=false; alert('Pick up to 3 herbs — keep it potent.'); return; }
-    customHerbs=Array.from(document.querySelectorAll('#customHerbPicker input:checked')).map(i=>i.value);
-    updateCustomHerbDisplay(); updateSummary();
-  });
+
+document.getElementById('attunementCheck').addEventListener('change', (e)=>{
+  state.attunement=e.target.checked;
+  document.getElementById('attunementFields').style.display = state.attunement ? 'block' : 'none';
+  updateSummary();
 });
+document.getElementById('attunementText').addEventListener('input', e=>{ state.attunementText=e.target.value; updateSummary(); });
 document.getElementById('personalization').addEventListener('input', e=>{ state.personalization=e.target.value; updateSummary(); });
+
+// Auto-select material for launch
+document.querySelector('.card[data-type="material"]').classList.add('selected');
+
 updateSteps(); updateSummary();
 </script>
 </body>
