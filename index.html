@@ -245,19 +245,66 @@ footer{padding:32px 0;text-align:center;font-size:11px;opacity:0.7}
 <footer>© HELD & BOUND • Botanical • Symbolic • Small Batch<br>Hand-formed • Held with intention • Bound with herbs</footer>
 </main>
 
+
 <script>
-// Sync blend dropdown with swipe gallery
+// Resilient gallery: works with 1, 2, 3 or 4 images - missing ones auto-hide
 document.querySelectorAll('.card').forEach(card => {
   const gallery = card.querySelector('.scroll-gallery');
   const blendSelect = card.querySelector('.blend-select');
-  if(!gallery || !blendSelect) return;
-  const map = {raw:0, moonmilk:1, heartfire:2, charcoal:3};
-  blendSelect.addEventListener('change', () => {
-    const val = blendSelect.value.toLowerCase();
-    const idx = map[val] !== undefined ? map[val] : 0;
-    const imgWidth = gallery.clientWidth;
-    gallery.scrollTo({left: imgWidth * idx, behavior: 'smooth'});
+  const blendTag = card.querySelector('.blend-tag');
+  if(!gallery) return;
+  const images = [...gallery.querySelectorAll('img')];
+
+  function updateUI(){
+    const visible = images.filter(i => i.style.display !== 'none' && !i.dataset.missing);
+    // update tag
+    if(blendTag){
+      if(visible.length === 0){
+        blendTag.textContent = 'Photos coming soon — DM to order';
+        blendTag.style.background = '#fff3';
+      } else if(visible.length === 1){
+        blendTag.textContent = visible[0].dataset.blend + ' ready';
+      } else {
+        blendTag.textContent = 'Swipe → ' + visible.length + ' blends';
+      }
+    }
+    // disable missing options in dropdown
+    if(blendSelect){
+      [...blendSelect.options].forEach(opt => {
+        const val = opt.value.toLowerCase().split(' ')[0];
+        const img = gallery.querySelector('img[data-blend="'+val+'"]');
+        if(img && img.dataset.missing){
+          opt.disabled = true;
+          if(!opt.textContent.includes('coming soon')){
+            opt.textContent = opt.textContent + ' — (coming soon)';
+          }
+        } else {
+          opt.disabled = false;
+        }
+      });
+    }
+  }
+
+  // check after load
+  setTimeout(updateUI, 600);
+  images.forEach(img => {
+    img.addEventListener('error', () => {
+      img.dataset.missing = '1';
+      img.style.display = 'none';
+      updateUI();
+    });
+    img.addEventListener('load', updateUI);
   });
+
+  if(blendSelect){
+    blendSelect.addEventListener('change', () => {
+      const v = blendSelect.value.toLowerCase().split(' ')[0];
+      const target = gallery.querySelector('img[data-blend="'+v+'"]');
+      if(target && !target.dataset.missing){
+        target.scrollIntoView({behavior:'smooth', inline:'start', block:'nearest'});
+      }
+    });
+  }
 });
 </script>
 
