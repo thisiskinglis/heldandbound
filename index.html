@@ -2,266 +2,516 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HELD & BOUND — Botanical • Symbolic • Small Batch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Held & Bound — Handcrafted Ritual Art | Botanical Clay Talismans</title>
+<meta name="description" content="Premium hand-formed ritual art — pendants, rune sets, incense holders & worry stones. Two botanical blends: Volcanic Charcoal Grey and Speckled Herbal Moonmilk. Made slowly in small batches with intention.">
+<meta name="keywords" content="handcrafted rune set, protection pendant, bindrune, incense holder, worry stone, botanical clay, ritual art, talisman necklace">
+<meta name="author" content="Held & Bound">
 <meta name="theme-color" content="#F9F5EF">
-<link rel="icon" type="image/png" href="favicon.png">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-<style>
-:root{--paper:#F9F5EF;--ink:#2B2520;--ink2:#5A524A;--clay:#C48B5F;--sage:#8A9A8B;--line:rgba(43,37,32,0.12);--line2:rgba(43,37,32,0.08)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6}
-img{max-width:100%;display:block}.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:20;background:rgba(249,245,239,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
-.head{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{height:54px}
-.hero{padding:48px 0 24px;text-align:center;max-width:760px;margin:0 auto}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5.2vw,60px);line-height:0.9;font-weight:500}
-.kicker{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:600}
-.divider{width:32px;height:1px;background:var(--clay);margin:16px auto}
-.card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}
-.card .img{aspect-ratio:1.05;background:#EDE5D8;position:relative;overflow:hidden}
-.card .body{padding:16px 18px}
-.card h3{font-family:'Cormorant Garamond',serif;font-size:18px;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 4px;font-weight:600}
-.price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-top:8px}
-.small{font-size:11.5px;color:var(--ink2)}
-.btn{display:flex;justify-content:center;align-items:center;width:100%;padding:12px 16px;border-radius:999px;background:var(--ink);color:#fff;border:1px solid var(--ink);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;text-decoration:none;margin-top:10px;cursor:pointer}
-.btn.clay{background:var(--clay);border-color:var(--clay)}
-.grid{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)}@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid-3{grid-template-columns:1fr}}
-.select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:12px;margin-top:8px}
-.select-label{font-size:10px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink2);margin-top:12px;display:block;font-weight:600}
+<link rel="canonical" href="https://heldandbound.com/">
 
-/* GALLERY - FIXED SWIPE */
-.scroll-gallery{display:flex;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;cursor:grab;touch-action:pan-x;width:100%;height:100%}
-.scroll-gallery:active{cursor:grabbing}
-.scroll-gallery::-webkit-scrollbar{display:none}
-.scroll-gallery img{flex:0 0 100%;width:100%;min-width:100%;height:100%;object-fit:cover;scroll-snap-align:start;user-select:none;-webkit-user-drag:none}
-.blend-tag{position:absolute;bottom:8px;left:8px;background:rgba(249,245,239,0.92);backdrop-filter:blur(6px);border:1px solid var(--line2);border-radius:999px;padding:4px 10px;font-size:9px;letter-spacing:0.14em;text-transform:uppercase;z-index:3;pointer-events:none}
-.dots{position:absolute;bottom:8px;right:8px;display:flex;gap:5px;z-index:3;pointer-events:none}
-.dots span{width:6px;height:6px;border-radius:999px;background:#fff;opacity:0.5;box-shadow:0 1px 3px rgba(0,0,0,0.2);transition:0.2s}
-.dots span.active{opacity:1;background:var(--ink)}
-footer{padding:32px 0;text-align:center;font-size:11px;opacity:0.7}
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://heldandbound.com/">
+<meta property="og:title" content="Held & Bound — Handcrafted Ritual Art | Botanical Clay Talismans">
+<meta property="og:description" content="Four premium objects. Two blends. Your chosen bind rune. Hand-formed in small batches with botanical materials and intention.">
+<meta property="og:image" content="images/pendants/moonmilk.jpg">
+<meta property="og:site_name" content="Held & Bound">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Held & Bound — Handcrafted Ritual Art">
+<meta name="twitter:description" content="Algiz Rune Protection Pendant, Elder Futhark Rune Sets, Sacred Space Incense Burners, Grounding Worry Stones.">
+<meta name="twitter:image" content="images/pendants/moonmilk.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        paper: '#F9F5EF',
+        paper2: '#F1E9DA',
+        ink: '#1C1917',
+        ink2: '#57534E',
+        line: 'rgba(28,25,23,0.10)',
+        clay: '#A46A4A',
+        stone: '#E7E5E4'
+      },
+      fontFamily: {
+        serif: ['Cormorant Garamond', 'Newsreader', 'serif'],
+        sans: ['Inter', 'sans-serif']
+      }
+    }
+  }
+}
+</script>
+<style>
+*{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.no-scrollbar::-webkit-scrollbar{display:none;} .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+.carousel-track{transition:transform 0.45s cubic-bezier(0.32,0.72,0,1);}
+.select-premium{
+  appearance:none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2357534E' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:right 14px center;
+}
 </style>
 </head>
-<body>
-<header><div class="wrap head"><img class="logo" src="H_B_Logo.png" alt="HELD & BOUND"><div class="kicker">Botanical • Symbolic • Small Batch</div></div></header>
-<main class="wrap">
-<section class="hero"><div class="kicker">Held & Bound</div><h1>Hand-formed,<br>made with intention.</h1><p class="sub">Choose your piece → choose your blend → choose your symbol.<br>Works with 2, 3 or 4 images. Swipe the image.</p><div class="divider"></div></section>
+<body class="bg-paper text-ink font-sans selection:bg-ink selection:text-paper">
 
-<section>
-<div class="kicker" style="text-align:center;margin-bottom:12px">Shop — image on top, blend + symbol inside card</div>
-<div class="grid grid-3">
+<!-- HEADER -->
+<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur-xl border-b border-line">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
+    <div class="flex items-center gap-10">
+      <a href="#" class="font-serif text-[22px] font-semibold tracking-[0.02em]">HELD & BOUND</a>
+      <nav class="hidden md:flex items-center gap-8 text-[11px] tracking-[0.14em] uppercase font-medium text-ink2">
+        <a href="#shop" class="hover:text-ink transition">Shop</a>
+        <a href="#process" class="hover:text-ink transition">Our Process</a>
+        <a href="#footer" class="hover:text-ink transition">Shipping</a>
+      </nav>
+    </div>
+    <div class="flex items-center gap-4">
+      <span class="hidden md:inline text-[10px] tracking-[0.18em] uppercase font-semibold text-ink2">Botanical • Symbolic • Small Batch</span>
+      <div class="w-8 h-8 rounded-full bg-ink text-paper flex items-center justify-center text-[10px] font-medium">HB</div>
+    </div>
+  </div>
+</header>
 
-<div class="card" data-product="rune-set">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/rune-set/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/rune-set/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/rune-set/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/rune-set/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Rune Set</h3><p class="small">24 hand-formed runes, herb-bound.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol set</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£44.99</div><a class="btn" href="https://buy.stripe.com/your_rune_set_link" target="_blank">Buy Now →</a>
-</div></div>
-
-<div class="card" data-product="hanging-talisman">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/hanging-talisman/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/hanging-talisman/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/hanging-talisman/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/hanging-talisman/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Hanging Talisman</h3><p class="small">For doorway, mirror, altar.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£24.99</div><a class="btn" href="https://buy.stripe.com/your_hanging_link" target="_blank">Buy Now →</a>
-</div></div>
-
-<div class="card" data-product="held-stone">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/held-stone/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/held-stone/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/held-stone/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/held-stone/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Held Stone</h3><p class="small">Thumb stone, palm-held.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£18.99</div><a class="btn" href="https://buy.stripe.com/your_held_stone_link" target="_blank">Buy Now →</a>
-</div></div>
-
-<div class="card" data-product="botanical-tile">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/botanical-tile/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/botanical-tile/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/botanical-tile/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/botanical-tile/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Botanical Tile</h3><p class="small">Flat tile for altar.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£22.99</div><a class="btn" href="https://buy.stripe.com/your_tile_link" target="_blank">Buy Now →</a>
-</div></div>
-
-<div class="card" data-product="pendant">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/pendant/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/pendant/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/pendant/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/pendant/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Pendant</h3><p class="small">Wearable talisman.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£28.99</div><a class="btn" href="https://buy.stripe.com/your_pendant_link" target="_blank">Buy Now →</a>
-</div></div>
-
-<div class="card" data-product="cone-holder">
-<div class="img"><div class="scroll-gallery">
-<img data-blend="raw" src="images/cone-holder/raw.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="moonmilk" src="images/cone-holder/moonmilk.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="heartfire" src="images/cone-holder/heartfire.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-<img data-blend="charcoal" src="images/cone-holder/charcoal.jpg" onerror="this.dataset.missing=1;this.style.display='none'">
-</div><div class="blend-tag">loading...</div><div class="dots"></div></div>
-<div class="body">
-<h3>Cone Holder</h3><p class="small">Triangular base, deep well.</p>
-<span class="select-label">Choose blend / finish</span>
-<select class="select blend-select"><option value="raw">RAW</option><option value="moonmilk">MOONMILK</option><option value="heartfire">HEARTFIRE</option><option value="charcoal">CHARCOAL</option></select>
-<span class="select-label">Choose symbol</span>
-<select class="select symbol-select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᛋ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
-<div class="price">£18.99</div><a class="btn" href="https://buy.stripe.com/your_cone_link" target="_blank">Buy Now →</a>
-</div></div>
-
-</div>
+<!-- HERO -->
+<section class="max-w-[1280px] mx-auto px-6 md:px-10 pt-16 md:pt-28 pb-12 md:pb-20 text-center">
+  <p class="text-[11px] tracking-[0.22em] uppercase font-semibold text-ink2 mb-6">Four Objects • Two Blends • Your Mark</p>
+  <h1 class="font-serif text-[42px] md:text-[72px] leading-[0.9] font-[500] tracking-[-0.02em] max-w-[760px] mx-auto">
+    Hand-formed,<br>made with <em class="font-[400] italic">intention.</em>
+  </h1>
+  <p class="mt-6 md:mt-8 text-[15px] md:text-[17px] leading-[1.6] text-ink2 max-w-[520px] mx-auto">
+    Premium ritual art formed slowly by hand. Volcanic Charcoal Grey and Speckled Herbal Moonmilk, infused with lavender, basil & coarse black pepper.
+  </p>
+  <div class="mt-10 flex justify-center"><div class="w-[1px] h-[56px] bg-gradient-to-b from-ink/20 to-transparent"></div></div>
 </section>
 
-<section id="once-off" style="padding:28px 24px;border:1px dashed var(--line);background:rgba(243,237,227,0.6);margin:28px 0;border-radius:24px;">
-<div class="kicker">Once-off — Real Clay — One of One</div>
-<div class="grid grid-3" style="margin-top:12px">
-<div class="card"><div class="img" style="aspect-ratio:1.2;"><img src="images/once-off/keeper.jpg" onerror="this.style.display='none'"></div><div class="body"><h3>#1 Keeper</h3><div class="price">£42.99</div><a class="btn" href="#">Pay →</a></div></div>
-<div class="card"><div class="img" style="aspect-ratio:1.2;"><img src="images/once-off/protection-hessian.jpg" onerror="this.style.display='none'"></div><div class="body"><h3>#2 Protection</h3><div class="price">£32.99</div><a class="btn" href="#">Pay →</a></div></div>
-<div class="card"><div class="img" style="aspect-ratio:1.2;"><img src="images/once-off/charcoal-cone.jpg" onerror="this.style.display='none'"></div><div class="body"><h3>#3 Charcoal Cone</h3><div class="price">£28.99</div><a class="btn" href="#">Pay →</a></div></div>
-</div>
+<!-- SHOP GRID -->
+<section id="shop" class="max-w-[1280px] mx-auto px-4 md:px-10 pb-24">
+  <div class="flex items-end justify-between mb-8 md:mb-12 px-2">
+    <h2 class="font-serif text-[26px] md:text-[32px] font-medium">Choose your piece</h2>
+    <p class="hidden md:block text-[13px] text-ink2 max-w-[380px] text-right">Each piece is finished with your chosen blend, mark and ritual. Image syncs instantly to your color selection.</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
+
+    <!-- 1. PENDANTS -->
+    <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="pendants" data-price="35">
+      <div class="relative aspect-[1.05] bg-stone overflow-hidden">
+        <div class="carousel relative w-full h-full">
+          <div class="carousel-track flex w-[200%] h-full">
+            <img src="images/pendants/charcoal.jpg" alt="Algiz Rune Protection Pendant Charcoal" class="w-1/2 h-full object-cover" loading="lazy">
+            <img src="images/pendants/moonmilk.jpg" alt="Algiz Rune Protection Pendant Moonmilk" class="w-1/2 h-full object-cover" loading="lazy">
+          </div>
+          <button class="carousel-prev hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm" aria-label="Previous">‹</button>
+          <button class="carousel-next hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm" aria-label="Next">›</button>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink transition-all"></span>
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink/30 transition-all"></span>
+          </div>
+          <div class="absolute top-4 left-4 bg-paper/90 backdrop-blur px-3 py-1 rounded-full text-[10px] tracking-[0.12em] uppercase font-semibold border border-line">Organic Round</div>
+        </div>
+      </div>
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-[19px] md:text-[21px] leading-[1.2] font-medium">Algiz Rune Protection Pendant | Handcrafted Talisman Necklace</h3>
+          <span class="font-serif text-[18px] font-semibold shrink-0">$35.00</span>
+        </div>
+        <p class="mt-2 text-[13px] leading-[1.5] text-ink2">Wearable symbolic piece, organic round edge, hand-formed. Top bind runes: Algiz for protection, Fehu + Jera for abundance.</p>
+        
+        <div class="mt-5 grid grid-cols-1 gap-3">
+          <div>
+            <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Intention / Bind Rune</label>
+            <select class="intention-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+              <option value="protection">Algiz (Protection)</option>
+              <option value="abundance">Fehu + Jera (Abundance)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Aesthetic Color</label>
+            <select class="color-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+              <option value="charcoal">Volcanic Charcoal Grey</option>
+              <option value="moonmilk">Speckled Herbal Moonmilk</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          Buy Now <span class="opacity-60">→</span>
+        </button>
+        <p class="mt-3 text-[11px] text-ink2 text-center">2 blends • Choose your mark • Handmade to order</p>
+      </div>
+    </div>
+
+    <!-- 2. RUNE SETS -->
+    <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="rune-set" data-price="125">
+      <div class="relative aspect-[1.05] bg-stone overflow-hidden">
+        <div class="carousel relative w-full h-full">
+          <div class="carousel-track flex w-[200%] h-full">
+            <img src="images/rune-set/charcoal.jpg" alt="Elder Futhark Rune Set Charcoal" class="w-1/2 h-full object-cover" loading="lazy">
+            <img src="images/rune-set/moonmilk.jpg" alt="Elder Futhark Rune Set Moonmilk" class="w-1/2 h-full object-cover" loading="lazy">
+          </div>
+          <button class="carousel-prev hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">‹</button>
+          <button class="carousel-next hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">›</button>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink"></span>
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink/30"></span>
+          </div>
+          <div class="absolute top-4 left-4 bg-paper/90 backdrop-blur px-3 py-1 rounded-full text-[10px] tracking-[0.12em] uppercase font-semibold border border-line">Thicker Round Coins</div>
+        </div>
+      </div>
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-[19px] md:text-[21px] leading-[1.2] font-medium">Handcrafted Elder Futhark Rune Set | Ancient Stone Divination Tools</h3>
+          <span class="font-serif text-[18px] font-semibold shrink-0">$125.00</span>
+        </div>
+        <p class="mt-2 text-[13px] leading-[1.5] text-ink2">24 Elder Futhark + 1 optional blank + pouch. Single standard rune per coin, 25 total. No bind rune — pure divination.</p>
+        
+        <div class="mt-5">
+          <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Aesthetic Color</label>
+          <select class="color-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+            <option value="charcoal">Volcanic Charcoal Grey</option>
+            <option value="moonmilk">Speckled Herbal Moonmilk</option>
+          </select>
+        </div>
+
+        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          Buy Now <span class="opacity-60">→</span>
+        </button>
+        <p class="mt-3 text-[11px] text-ink2 text-center">2 blends • Single runes • 25 coins + pouch</p>
+      </div>
+    </div>
+
+    <!-- 3. INCENSE HOLDERS -->
+    <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="incense-holders" data-price="48">
+      <div class="relative aspect-[1.05] bg-stone overflow-hidden">
+        <div class="carousel relative w-full h-full">
+          <div class="carousel-track flex w-[200%] h-full">
+            <img src="images/incense-holders/charcoal.jpg" alt="Sacred Space Incense Burner Charcoal" class="w-1/2 h-full object-cover" loading="lazy">
+            <img src="images/incense-holders/moonmilk.jpg" alt="Sacred Space Incense Burner Moonmilk" class="w-1/2 h-full object-cover" loading="lazy">
+          </div>
+          <button class="carousel-prev hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">‹</button>
+          <button class="carousel-next hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">›</button>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink"></span>
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink/30"></span>
+          </div>
+          <div class="absolute top-4 left-4 bg-paper/90 backdrop-blur px-3 py-1 rounded-full text-[10px] tracking-[0.12em] uppercase font-semibold border border-line">Chunky Dome Pinch Pot</div>
+        </div>
+      </div>
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-[19px] md:text-[21px] leading-[1.2] font-medium">Sacred Space Incense Burner | Home Protection Bindrune Holder</h3>
+          <span class="font-serif text-[18px] font-semibold shrink-0">$48.00</span>
+        </div>
+        <p class="mt-2 text-[13px] leading-[1.5] text-ink2">Hand-formed chunky dome pinch pot. Algiz + Othala for sacred space, home sanctuary, protection.</p>
+        
+        <div class="mt-5 grid grid-cols-1 gap-3">
+          <div>
+            <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Intention / Bind Rune</label>
+            <select class="intention-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+              <option value="sacred-space">Algiz + Othala (Sacred Space)</option>
+              <option value="abundance">Fehu + Jera (Abundance)</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Aesthetic Color</label>
+            <select class="color-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+              <option value="charcoal">Volcanic Charcoal Grey</option>
+              <option value="moonmilk">Speckled Herbal Moonmilk</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          Buy Now <span class="opacity-60">→</span>
+        </button>
+        <p class="mt-3 text-[11px] text-ink2 text-center">2 blends • Algiz+Othala top seller • Heavy</p>
+      </div>
+    </div>
+
+    <!-- 4. WORRY STONES -->
+    <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="worry-stones" data-price="24">
+      <div class="relative aspect-[1.05] bg-stone overflow-hidden">
+        <div class="carousel relative w-full h-full">
+          <div class="carousel-track flex w-[200%] h-full">
+            <img src="images/worry-stones/charcoal.jpg" alt="Grounding Worry Stone Charcoal" class="w-1/2 h-full object-cover" loading="lazy">
+            <img src="images/worry-stones/moonmilk.jpg" alt="Grounding Worry Stone Moonmilk" class="w-1/2 h-full object-cover" loading="lazy">
+          </div>
+          <button class="carousel-prev hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">‹</button>
+          <button class="carousel-next hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-white/90 backdrop-blur border border-line items-center justify-center hover:bg-white transition shadow-sm">›</button>
+          <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-1.5">
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink"></span>
+            <span class="dot w-1.5 h-1.5 rounded-full bg-ink/30"></span>
+          </div>
+          <div class="absolute top-4 left-4 bg-paper/90 backdrop-blur px-3 py-1 rounded-full text-[10px] tracking-[0.12em] uppercase font-semibold border border-line">Grounding Pocket Tool</div>
+        </div>
+      </div>
+      <div class="p-6 md:p-7">
+        <div class="flex items-start justify-between gap-4">
+          <h3 class="font-serif text-[19px] md:text-[21px] leading-[1.2] font-medium">Ancient Stone Grounding Worry Stone | Botanical Clay Pocket Tool</h3>
+          <span class="font-serif text-[18px] font-semibold shrink-0">$24.00</span>
+        </div>
+        <p class="mt-2 text-[13px] leading-[1.5] text-ink2">Smooth triangle/oval with thumb divot. Palm-sized tactile stone made to be held, grounding ritual.</p>
+        
+        <div class="mt-5">
+          <label class="block text-[10px] tracking-[0.12em] uppercase font-semibold text-ink2 mb-1.5">Aesthetic Color</label>
+          <select class="color-select select-premium w-full h-[42px] border border-line rounded-full bg-paper px-4 pr-10 text-[13px] font-medium focus:outline-none focus:border-ink transition">
+            <option value="charcoal">Volcanic Charcoal Grey</option>
+            <option value="moonmilk">Speckled Herbal Moonmilk</option>
+          </select>
+        </div>
+
+        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          Buy Now <span class="opacity-60">→</span>
+        </button>
+        <p class="mt-3 text-[11px] text-ink2 text-center">2 blends • Unmarked / Algiz • Thumb divot</p>
+      </div>
+    </div>
+
+  </div>
 </section>
 
-<footer>© HELD & BOUND • Hand-formed • Held with intention</footer>
-</main>
+<!-- PROCESS -->
+<section id="process" class="bg-white border-y border-line">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-16 md:py-24 grid md:grid-cols-3 gap-10 md:gap-16">
+    <div>
+      <p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-ink2 mb-4">01 — Material</p>
+      <h3 class="font-serif text-[20px] font-medium leading-[1.2]">Two blends only. Ancient Stone + Moonmilk.</h3>
+      <p class="mt-3 text-[13px] leading-[1.6] text-ink2">Ancient Stone is textured charcoal — deep smoke black, rough mineral, intentional crackle. Moonmilk is speckled herbal — lavender, basil & coarse black pepper in soft cream clay.</p>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-ink2 mb-4">02 — Mark</p>
+      <h3 class="font-serif text-[20px] font-medium leading-[1.2]">Bind runes chosen for protection & abundance.</h3>
+      <p class="mt-3 text-[13px] leading-[1.6] text-ink2">Algiz ᛉ for protection, Fehu ᛃ + Jera for harvest, Algiz + Othala ᛉᛟ for sacred space / home sanctuary. Each carved by hand.</p>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-ink2 mb-4">03 — Ritual</p>
+      <h3 class="font-serif text-[20px] font-medium leading-[1.2]">Made slowly, finished with blessing.</h3>
+      <p class="mt-3 text-[13px] leading-[1.6] text-ink2">Every piece is formed by hand in small batches, dried slowly, fired, and finished with a simple blessing ritual before leaving the studio.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer" class="bg-ink text-paper/70">
+  <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-14 md:py-20 grid md:grid-cols-4 gap-10">
+    <div class="md:col-span-2">
+      <p class="font-serif text-[22px] font-semibold text-paper tracking-[0.02em]">HELD & BOUND</p>
+      <p class="mt-3 text-[13px] leading-[1.6] max-w-[380px]">Botanical • Symbolic • Small Batch. Hand-formed ritual art made with intention, botanical materials and bind runes.</p>
+      <p class="mt-6 text-[11px] tracking-[0.12em] uppercase">© <span id="year"></span> Held & Bound — Handmade to order</p>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-[0.14em] uppercase font-semibold text-paper mb-4">Shipping Info</p>
+      <p class="text-[13px] leading-[1.6]">Made to order in 3–5 days. Ships from UK. Tracked shipping. Natural variation in colour, texture and botanical fleck is part of the process. Each piece is unique.</p>
+    </div>
+    <div>
+      <p class="text-[11px] tracking-[0.14em] uppercase font-semibold text-paper mb-4">Returns Policy</p>
+      <p class="text-[13px] leading-[1.6]">Handmade to your chosen blend and mark, so returns are by exception. If your piece arrives damaged, contact us within 48h with photos and we will replace or refund.</p>
+      <div class="mt-6 flex gap-4 text-[11px] tracking-[0.12em] uppercase">
+        <a href="mailto:hello@heldandbound.com" class="underline underline-offset-4 hover:text-paper transition">Contact</a>
+        <a href="#" class="underline underline-offset-4 hover:text-paper transition">Instagram</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- TOAST -->
+<div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-ink text-paper text-[12px] px-5 py-3 rounded-full shadow-xl border border-white/10"></div>
 
 <script>
-// FIXED SWIPE + DOTS + DROPDOWN SYNC
-document.querySelectorAll('.card').forEach(card => {
-  const gallery = card.querySelector('.scroll-gallery');
-  const sel = card.querySelector('.blend-select');
-  const tag = card.querySelector('.blend-tag');
-  const dotsWrap = card.querySelector('.dots');
-  if(!gallery) return;
-  let imgs = [...gallery.querySelectorAll('img')];
+// Year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-  function getVisible(){
-    return [...gallery.querySelectorAll('img')].filter(i=>!i.dataset.missing && i.style.display!=='none');
-  }
+// --- STRIPE LINKS LOOKUP TABLE - REPLACE WITH YOUR REAL PAYMENT LINKS ---
+const stripeLinks = {
+  // Pendants - 4 variants
+  "pendants-protection-charcoal": "https://buy.stripe.com/test_pendants_protection_charcoal",
+  "pendants-protection-moonmilk": "https://buy.stripe.com/test_pendants_protection_moonmilk",
+  "pendants-abundance-charcoal": "https://buy.stripe.com/test_pendants_abundance_charcoal",
+  "pendants-abundance-moonmilk": "https://buy.stripe.com/test_pendants_abundance_moonmilk",
 
-  function renderDots(){
-    const vis = getVisible();
-    if(!dotsWrap) return;
-    dotsWrap.innerHTML='';
-    vis.forEach((_,i)=>{
-      const d=document.createElement('span');
-      if(i===0) d.classList.add('active');
-      dotsWrap.appendChild(d);
+  // Rune Sets - 2 variants (color only)
+  "rune-set-charcoal": "https://buy.stripe.com/test_rune_set_charcoal",
+  "rune-set-moonmilk": "https://buy.stripe.com/test_rune_set_moonmilk",
+
+  // Incense Holders - 4 variants
+  "incense-holders-sacred-space-charcoal": "https://buy.stripe.com/test_incense_sacred_charcoal",
+  "incense-holders-sacred-space-moonmilk": "https://buy.stripe.com/test_incense_sacred_moonmilk",
+  "incense-holders-abundance-charcoal": "https://buy.stripe.com/test_incense_abundance_charcoal",
+  "incense-holders-abundance-moonmilk": "https://buy.stripe.com/test_incense_abundance_moonmilk",
+
+  // Worry Stones - 2 variants
+  "worry-stones-charcoal": "https://buy.stripe.com/test_worry_charcoal",
+  "worry-stones-moonmilk": "https://buy.stripe.com/test_worry_moonmilk"
+};
+
+// Helper to normalize intention values to lookup keys
+function normalizeIntention(val){
+  if(!val) return '';
+  val = val.toLowerCase();
+  if(val.includes('protection') || val === 'algiz') return 'protection';
+  if(val.includes('abundance') || val.includes('fehu')) return 'abundance';
+  if(val.includes('sacred')) return 'sacred-space';
+  return val;
+}
+
+document.querySelectorAll('.product-card').forEach(card => {
+  const productId = card.dataset.product;
+  const track = card.querySelector('.carousel-track');
+  const dots = card.querySelectorAll('.dot');
+  const prevBtn = card.querySelector('.carousel-prev');
+  const nextBtn = card.querySelector('.carousel-next');
+  const colorSelect = card.querySelector('.color-select');
+  const intentionSelect = card.querySelector('.intention-select');
+  const buyBtn = card.querySelector('.buy-btn');
+  const carousel = card.querySelector('.carousel');
+
+  let currentIndex = 0; // 0 = charcoal, 1 = moonmilk
+  const total = 2;
+
+  function updateCarousel(index){
+    currentIndex = Math.max(0, Math.min(total-1, index));
+    track.style.transform = `translateX(-${currentIndex * 50}%)`;
+    dots.forEach((dot,i)=>{
+      dot.className = `dot w-1.5 h-1.5 rounded-full transition-all ${i===currentIndex ? 'bg-ink w-3' : 'bg-ink/30'}`;
     });
-    if(vis.length<=1) dotsWrap.style.display='none';
-    else dotsWrap.style.display='flex';
-  }
-
-  function update(){
-    const vis = getVisible();
-    if(tag){
-      if(vis.length===0) tag.textContent='DM to order';
-      else if(vis.length===1) tag.textContent=vis[0].dataset.blend+' ready';
-      else tag.textContent='Swipe → '+vis.length+' blends';
-    }
-    renderDots();
-    // update dropdown disabled
-    if(sel){
-      [...sel.options].forEach(o=>{
-        const v=o.value.toLowerCase().split(' ')[0];
-        const im=gallery.querySelector('img[data-blend="'+v+'"]');
-        if(im && im.dataset.missing){ o.disabled=true; if(!o.textContent.includes('soon')) o.textContent=o.textContent+' — coming soon'; }
-        else{ o.disabled=false; o.textContent=o.textContent.replace(' — coming soon','').replace(' — (coming soon)',''); }
-      });
+    // Sync color dropdown to carousel
+    if(colorSelect){
+      const colorValue = currentIndex === 0 ? 'charcoal' : 'moonmilk';
+      if(colorSelect.value !== colorValue){
+        colorSelect.value = colorValue;
+      }
     }
   }
 
-  function setActiveDot(){
-    const vis = getVisible();
-    if(!vis.length) return;
-    const scrollLeft = gallery.scrollLeft;
-    const w = gallery.clientWidth;
-    const idx = Math.round(scrollLeft / w);
-    if(dotsWrap){
-      [...dotsWrap.children].forEach((d,i)=>d.classList.toggle('active', i===idx));
-    }
-    // sync dropdown to visible image
-    if(sel && vis[idx]){
-      sel.value = vis[idx].dataset.blend;
-    }
-  }
-
-  // initial
-  setTimeout(()=>{ update(); setActiveDot(); }, 500);
-
-  // handle missing
-  imgs.forEach(im=>{
-    im.addEventListener('error',()=>{ im.dataset.missing=1; im.style.display='none'; update(); });
-    im.addEventListener('load', update);
-  });
-
-  // dropdown -> scroll
-  if(sel){
-    sel.addEventListener('change',()=>{
-      const v=sel.value.toLowerCase().split(' ')[0];
-      const t=gallery.querySelector('img[data-blend="'+v+'"]');
-      if(t && !t.dataset.missing) t.scrollIntoView({behavior:'smooth', inline:'start', block:'nearest'});
+  // Color dropdown -> image syncing (REQUIRED)
+  if(colorSelect){
+    colorSelect.addEventListener('change', (e)=>{
+      const val = e.target.value;
+      const idx = val === 'moonmilk' ? 1 : 0;
+      updateCarousel(idx);
     });
   }
 
-  // scroll listener for dots + dropdown sync
-  let ticking=false;
-  gallery.addEventListener('scroll', ()=>{
-    if(!ticking){
-      window.requestAnimationFrame(()=>{ setActiveDot(); ticking=false; });
-      ticking=true;
+  // Arrows
+  if(prevBtn) prevBtn.addEventListener('click', ()=> updateCarousel(currentIndex - 1));
+  if(nextBtn) nextBtn.addEventListener('click', ()=> updateCarousel(currentIndex + 1));
+
+  // Touch swipe support
+  let startX = 0;
+  let currentX = 0;
+  let isDragging = false;
+
+  carousel.addEventListener('touchstart', (e)=>{
+    startX = e.touches[0].clientX;
+    isDragging = true;
+    track.style.transition = 'none';
+  }, {passive:true});
+
+  carousel.addEventListener('touchmove', (e)=>{
+    if(!isDragging) return;
+    currentX = e.touches[0].clientX;
+    const diff = currentX - startX;
+    const percent = (diff / carousel.clientWidth) * 50;
+    const baseTranslate = -currentIndex * 50;
+    track.style.transform = `translateX(${baseTranslate + percent}%)`;
+  }, {passive:true});
+
+  carousel.addEventListener('touchend', (e)=>{
+    if(!isDragging) return;
+    isDragging = false;
+    track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
+    const diff = currentX - startX;
+    if(Math.abs(diff) > 40){
+      if(diff < 0) updateCarousel(currentIndex + 1);
+      else updateCarousel(currentIndex - 1);
+    } else {
+      updateCarousel(currentIndex);
     }
   });
 
-  // drag support for desktop
-  let isDown=false, startX, scrollLeftStart;
-  gallery.addEventListener('mousedown', e=>{ isDown=true; gallery.classList.add('dragging'); startX=e.pageX-gallery.offsetLeft; scrollLeftStart=gallery.scrollLeft; });
-  gallery.addEventListener('mouseleave', ()=>{ isDown=false; });
-  gallery.addEventListener('mouseup', ()=>{ isDown=false; });
-  gallery.addEventListener('mousemove', e=>{
-    if(!isDown) return;
-    e.preventDefault();
-    const x=e.pageX-gallery.offsetLeft;
-    const walk=(x-startX)*1.2;
-    gallery.scrollLeft=scrollLeftStart-walk;
+  // Mouse drag for desktop
+  let mouseDown = false;
+  carousel.addEventListener('mousedown', (e)=>{
+    mouseDown = true;
+    startX = e.clientX;
+    track.style.transition = 'none';
+    carousel.style.cursor = 'grabbing';
   });
+  window.addEventListener('mouseup', ()=>{
+    if(!mouseDown) return;
+    mouseDown = false;
+    track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
+    carousel.style.cursor = 'grab';
+    const diff = currentX - startX;
+    if(Math.abs(diff) > 40){
+      if(diff < 0) updateCarousel(currentIndex + 1);
+      else updateCarousel(currentIndex - 1);
+    } else {
+      updateCarousel(currentIndex);
+    }
+  });
+  carousel.addEventListener('mousemove', (e)=>{
+    if(!mouseDown) return;
+    currentX = e.clientX;
+    const diff = currentX - startX;
+    const percent = (diff / carousel.clientWidth) * 50;
+    const baseTranslate = -currentIndex * 50;
+    track.style.transform = `translateX(${baseTranslate + percent}%)`;
+  });
+
+  // Stripe Buy Now logic
+  buyBtn.addEventListener('click', ()=>{
+    const color = colorSelect ? colorSelect.value : 'charcoal';
+    const intentionRaw = intentionSelect ? intentionSelect.value : '';
+    const intention = normalizeIntention(intentionRaw);
+
+    let key = '';
+    if(productId === 'pendants'){
+      key = `${productId}-${intention}-${color}`;
+    } else if(productId === 'incense-holders'){
+      key = `${productId}-${intention}-${color}`;
+    } else {
+      // rune-set and worry-stones have only color
+      key = `${productId}-${color}`;
+    }
+
+    const url = stripeLinks[key];
+    if(!url || url.includes('REPLACE') || url.includes('test_')){
+      // Show toast with key so user knows what to replace
+      showToast(`Stripe link missing for ${key} — replace in stripeLinks object`);
+      console.log('Stripe lookup key:', key, 'URL:', url);
+      // For demo, still allow redirect if placeholder exists
+      if(url){
+        setTimeout(()=>{ window.location.href = url; }, 800);
+      }
+      return;
+    }
+    window.location.href = url;
+  });
+
+  // Init
+  updateCarousel(0);
 });
+
+function showToast(msg){
+  const toast = document.getElementById('toast');
+  toast.textContent = msg;
+  toast.classList.remove('hidden');
+  toast.style.opacity = '1';
+  toast.style.transform = 'translate(-50%, 0)';
+  setTimeout(()=>{
+    toast.style.opacity = '0';
+    toast.style.transform = 'translate(-50%, 20px)';
+    setTimeout(()=> toast.classList.add('hidden'), 300);
+  }, 3000);
+}
 </script>
 </body>
 </html>
