@@ -3,191 +3,269 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>HELD & BOUND — Fixed Price — Launch Ready</title>
+<title>HELD & BOUND — Botanical • Symbolic • Small Batch</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{--paper:#F9F5EF;--paper2:#F3EDE3;--ink:#2B2520;--ink2:#5A524A;--clay:#C48B5F;--sage:#8A9A8B;--line:rgba(43,37,32,0.12);--line2:rgba(43,37,32,0.08)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
-header{position:sticky;top:0;z-index:20;background:rgba(249,245,239,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
-.head{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{height:52px}
-.tagline{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;opacity:0.7}
-.hero{padding:52px 0 18px;text-align:center;max-width:760px;margin:0 auto}
-.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(32px,5vw,50px);line-height:0.95;font-weight:500;margin:0 0 12px}
-.kicker{font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:600}
-.intention{margin:24px auto 32px;padding:22px;border:1px solid var(--line);border-radius:20px;background:#fff;max-width:760px;text-align:left}
-.intention h2{font-family:'Cormorant Garamond',serif;font-size:24px;margin:0 0 8px;font-weight:500}
-.small{font-size:11px;color:var(--ink2);opacity:0.85;line-height:1.5}
-.grid{display:grid;gap:14px}.grid-3{grid-template-columns:repeat(3,1fr)}@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid-3{grid-template-columns:1fr}}
-.card{border:1px solid var(--line);background:var(--paper2);padding:14px;border-radius:18px}
-.card .img{aspect-ratio:1;background:#EDE5D8;border-radius:12px;overflow:hidden;border:1px solid var(--line2)}
-.card h3{font-family:'Cormorant Garamond',serif;font-size:18px;margin:10px 0 4px;font-weight:600}
-.price{font-size:14px;font-weight:700;margin-top:6px}
-.btn{display:block;width:100%;padding:12px 16px;border-radius:999px;background:var(--ink);color:#fff;border:1px solid var(--ink);text-align:center;text-decoration:none;font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;margin-top:8px}
-.btn.ghost{background:transparent;color:var(--ink)}
-.btn.clay{background:var(--clay);border-color:var(--clay)}
-.select{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;margin-top:6px}
-.swatch{width:12px;height:12px;border-radius:50%;display:inline-block;border:1px solid var(--line);margin-right:4px;vertical-align:middle}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:18px 0}
-@media(max-width:800px){.gallery{grid-template-columns:repeat(2,1fr)}}
-.gallery .gimg{aspect-ratio:1;border-radius:14px;overflow:hidden;border:1px solid var(--line2);background:var(--paper2)}
-.contact{margin:36px 0 0;padding:36px 24px;text-align:center;border:1px solid var(--line);border-radius:20px;background:#fff}
-footer{padding:28px 0;text-align:center;font-size:11px;opacity:0.7}
+header{position:sticky;top:0;z-index:20;background:rgba(249,245,239,0.94);backdrop-filter:blur(10px);border-bottom:1px solid var(--line2)}
+.head{display:flex;justify-content:space-between;align-items:center;padding:14px 0}.logo{height:54px}
+.hero{padding:64px 0 24px;text-align:center;max-width:760px;margin:0 auto}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(38px,5.6vw,64px);line-height:0.9;font-weight:500;letter-spacing:-0.02em;margin:0 0 14px}
+.kicker{font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:var(--sage);font-weight:600}
+.sub{font-size:13.5px;color:var(--ink2);max-width:60ch;margin:0 auto;line-height:1.6}
+.divider{width:32px;height:1px;background:var(--clay);margin:20px auto}
+.card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:0;overflow:hidden;transition:.25s}
+.card:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(43,37,32,0.08)}
+.card .img{aspect-ratio:1.05;background:#EDE5D8;overflow:hidden}
+.card .body{padding:16px 16px 18px}
+.card h3{font-family:'Cormorant Garamond',serif;font-size:19px;letter-spacing:0.06em;text-transform:uppercase;margin:0 0 4px;font-weight:600}
+.price{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;margin-top:6px}
+.small{font-size:11.5px;color:var(--ink2);line-height:1.5}
+.btn{display:inline-flex;justify-content:center;align-items:center;width:100%;padding:12px 16px;border-radius:999px;background:var(--ink);color:#fff;border:1px solid var(--ink);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;font-weight:600;text-decoration:none;margin-top:10px}
+.btn.ghost{background:transparent;color:var(--ink)}.btn.clay{background:var(--clay);border-color:var(--clay)}
+.grid{display:grid;gap:18px}.grid-3{grid-template-columns:repeat(3,1fr)}@media(max-width:900px){.grid-3{grid-template-columns:1fr 1fr}}@media(max-width:560px){.grid-3{grid-template-columns:1fr}}
+.section{margin:40px 0;padding:32px 24px;border:1px solid var(--line);border-radius:24px;background:#fff}
+.section h2{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:500;margin:0 0 10px;letter-spacing:-0.01em}
+.blend-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}@media(max-width:900px){.blend-grid{grid-template-columns:1fr 1fr}}@media(max-width:560px){.blend-grid{grid-template-columns:1fr}}
+.blend{border:1px solid var(--line2);background:var(--paper2);border-radius:14px;padding:14px}
+.blend b{font-family:'Cormorant Garamond',serif;font-size:16px;display:block;margin-bottom:4px}
+.mark-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}@media(max-width:900px){.mark-grid{grid-template-columns:1fr 1fr}}
+.mark{border:1px solid var(--line2);background:var(--paper2);border-radius:14px;padding:14px;text-align:center}
+.mark b{display:block;font-family:'Cormorant Garamond',serif;font-size:16px}
+.detail{margin-top:32px;padding:28px 22px;border:1px solid var(--ink);border-radius:22px;background:#fff;scroll-margin-top:90px}
+.detail h3{font-family:'Cormorant Garamond',serif;font-size:26px;margin:0 0 6px;font-weight:500}
+.select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;background:#fff;font-size:13px;margin-top:8px}
+.order-mini{margin-top:14px;padding:12px;border:1px dashed var(--line);border-radius:12px;background:var(--paper2)}
+footer{padding:32px 0;text-align:center;font-size:11px;opacity:0.7}
 </style>
 </head>
 <body>
 <header><div class="wrap head">
 <img class="logo" src="H_B_Logo.png" alt="HELD & BOUND">
-<div class="tagline">Launch: fixed price • blend & symbol same price • 2 Stripe links per product</div>
+<div class="kicker">Botanical • Symbolic • Small Batch</div>
 </div></header>
 
 <main class="wrap">
 
 <section class="hero">
-<div class="kicker">Made with intention • Small-batch</div>
-<h1>Choose object, blend & symbol — same price. Click pay, goodbye.</h1>
-<p class="small">Each item priced differently. Blends (RAW, MOONMILK, HEARTFIRE, CHARCOAL) same price for all. Symbols (including Fehu Money) same price for all. Two Stripe links per product: product alone, or product + Attunement (+£18).</p>
+<div class="kicker">Held & Bound</div>
+<h1>Hand-formed objects<br>made with intention.</h1>
+<p class="sub">Choose your piece. Choose your botanical blend. Choose your symbol.<br>Every standard combination is included in the listed price.</p>
+<div class="divider"></div>
+<p class="small">Want something made specifically for you? Add Personal Attunement or request a bespoke piece.</p>
 </section>
 
-<section class="intention">
+<section class="section">
+<div class="kicker">Made with intention</div>
 <h2>Made with intention</h2>
-<p class="small">Every piece is made slowly, by hand, with a specific intention. Herbs, symbol and form are chosen deliberately, finished with a simple blessing ritual before it leaves the studio.</p>
-<p class="small">Personal Attunement +£18 / +$22: intention-led making + candle blessing + optional photo/name/DOB/intention + personal focus before dispatch. Photos optional, deleted after. <em>Offered as personal ritual — no specific outcome guaranteed.</em></p>
-</section>
-
-<div class="gallery">
-<div class="gimg"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div>
-<div class="gimg"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging"></div>
-<div class="gimg"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Held Stone"></div>
-<div class="gimg"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Tile"></div>
+<p class="small">Every Held & Bound piece is formed slowly by hand.</p>
+<p class="small">The material, botanicals and mark are chosen deliberately, and each piece is finished with a simple blessing ritual before leaving the studio.</p>
+<div style="margin-top:18px;padding:16px;border:1px dashed var(--line);border-radius:14px;background:var(--paper2)">
+<b style="font-family:'Cormorant Garamond',serif;font-size:18px">Personal Attunement — +£18 / +$22</b>
+<p class="small" style="margin:8px 0 0">For a piece made with a specific person or intention in mind.</p>
+<p class="small">You may send an optional:<br>Photo • Name • Date of birth • Written intention</p>
+<p class="small">Your piece is then finished through a personal candle ritual and attunement before dispatch.</p>
+<p class="small">Photos are optional and deleted afterwards.</p>
+<p class="small"><em>Personal Attunement is offered as a symbolic and ritual practice. No specific outcome is guaranteed.</em></p>
 </div>
-
-<!-- HOW STRIPE WORKS — CORRECT WAY -->
-<section style="padding:18px;border:1px dashed var(--line);border-radius:14px;background:#fff;margin-bottom:18px">
-<b style="font-family:'Cormorant Garamond',serif">Correct way for launch (Stripe):</b>
-<p class="small" style="margin:8px 0 0">
-1. In Stripe Dashboard → Payment Links → Create link for each product. Set fixed price: Rune Set £27.99, Hanging Charm £14.99, Held Stone £9.99, Tile £14.99, Pendant £14.99, Keepsake £19.99.<br>
-2. Add 2 custom fields to each link: "Blend (RAW / MOONMILK / HEARTFIRE / CHARCOAL)" and "Symbol (Algiz / Berkano / Raidho / Fehu Money / No symbol / Initial / Custom sigil)" — set as dropdown, required.<br>
-3. Duplicate each link and add +£18 for Attunement version. So 12 links total: 6 products x 2 (with/without attunement). Example: Rune Set £27.99 and Rune Set + Attunement £45.99.<br>
-4. Paste links below where it says your_..._link. That's it — customer picks blend/symbol in Stripe checkout, pays fixed price, you get email with their choices. No dynamic pricing bug.
-</p>
 </section>
 
-<!-- PRODUCT GRID — EDIT PRICES & LINKS HERE -->
 <section>
-<div class="kicker">Fixed price shop — 6 products</div>
-<div class="grid grid-3" style="margin-top:12px">
+<div class="kicker" style="text-align:center">Shop</div>
+<div class="grid grid-3" style="margin-top:14px">
 
-<!-- PRODUCT 1 -->
 <div class="card">
 <div class="img"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div>
-<h3>Rune Set — 24 + 1</h3>
-<div class="small">Organic Hard Bake • Full Elder Futhark</div>
-<div class="price">£27.99 — fixed, blends & symbols same price</div>
-
-<label class="small">Choose blend — same price</label>
-<select class="select blend-select" data-product="Rune Set">
-<option>RAW — Cream / Natural</option>
-<option>MOONMILK — Soft cream — Lavender • Chamomile • Salt</option>
-<option>HEARTFIRE — Paprika orange — Paprika • Turmeric</option>
-<option>CHARCOAL — Deep black — Charcoal</option>
-</select>
-
-<label class="small" style="margin-top:8px;display:block">Choose symbol — same price</label>
-<select class="select symbol-select" data-product="Rune Set">
-<option>Algiz ᛉ — Protection</option>
-<option>Berkano ᛒ — Growth</option>
-<option>Raidho ᚱ — Journey</option>
-<option>Fehu ᚠ — Money / Abundance — NEW</option>
-<option>No symbol — Plain</option>
-<option>Initial — 1-3 letters (add in Stripe note)</option>
-<option>Custom sigil — (describe in Stripe note)</option>
-</select>
-
-<a class="btn" href="https://buy.stripe.com/your_rune_set_27_99_link" target="_blank">Buy Rune Set — £27.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_rune_set_45_99_attunement_link" target="_blank">Buy + Attunement — £45.99 (£27.99+£18)</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message me</a>
+<div class="body">
+<h3>Rune Set</h3>
+<p class="small">24 hand-formed Elder Futhark runes + 1 optional blank, with pouch.</p>
+<div class="price">£27.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#rune-set">Choose yours →</a>
+</div>
 </div>
 
-<!-- PRODUCT 2 -->
 <div class="card">
-<div class="img"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging Charm"></div>
-<h3>Hanging Charm — 6cm</h3>
-<div class="small">Organic Hard Bake • Doorway ward</div>
-<div class="price">£14.99 — fixed</div>
-<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
-<select class="select"><option>Algiz ᛉ</option><option>Berkano ᛒ</option><option>Raidho ᚱ</option><option>Fehu ᚠ Money</option><option>No symbol</option><option>Initial</option><option>Custom sigil</option></select>
-<a class="btn" href="https://buy.stripe.com/your_hanging_14_99_link" target="_blank">Buy — £14.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_hanging_32_99_attunement_link" target="_blank">Buy + Attunement — £32.99</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message</a>
+<div class="img"><img src="algiz-hanging-ward-light-bake-jute-twine.jpg" alt="Hanging Talisman"></div>
+<div class="body">
+<h3>Hanging Talisman</h3>
+<p class="small">A hand-formed botanical piece made to hang, carry meaning and keep close.</p>
+<div class="price">£14.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#hanging-talisman">Choose yours →</a>
+</div>
 </div>
 
-<!-- PRODUCT 3 -->
 <div class="card">
 <div class="img"><img src="algiz-worry-stone-orb-white-hard-bake.jpg" alt="Held Stone"></div>
-<h3>Held Stone — Oval</h3>
-<div class="small">Organic Hard Bake • Palm stone</div>
-<div class="price">£9.99 — fixed</div>
-<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
-<select class="select"><option>Algiz ᛉ</option><option>Berkano ᛒ</option><option>Raidho ᚱ</option><option>Fehu ᚠ Money</option><option>No symbol</option><option>Initial</option><option>Custom sigil</option></select>
-<a class="btn" href="https://buy.stripe.com/your_held_stone_9_99_link" target="_blank">Buy — £9.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_held_stone_27_99_attunement_link" target="_blank">Buy + Attunement — £27.99</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message</a>
+<div class="body">
+<h3>Held Stone</h3>
+<p class="small">A smooth palm stone made to be held, rubbed and returned to.</p>
+<div class="price">£9.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#held-stone">Choose yours →</a>
+</div>
 </div>
 
-<!-- PRODUCT 4 -->
 <div class="card">
 <div class="img"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Botanical Tile"></div>
-<h3>Botanical Tile — 6cm</h3>
-<div class="small">Organic Hard Bake • Altar tile</div>
-<div class="price">£14.99 — fixed</div>
-<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
-<select class="select"><option>Algiz ᛉ</option><option>Berkano ᛒ</option><option>Raidho ᚱ</option><option>Fehu ᚠ Money</option><option>No symbol</option><option>Initial</option><option>Custom sigil</option></select>
-<a class="btn" href="https://buy.stripe.com/your_tile_14_99_link" target="_blank">Buy — £14.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_tile_32_99_attunement_link" target="_blank">Buy + Attunement — £32.99</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message</a>
+<div class="body">
+<h3>Botanical Tile</h3>
+<p class="small">A hand-pressed botanical tile for altar, shelf, desk or symbolic space.</p>
+<div class="price">£14.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#botanical-tile">Choose yours →</a>
+</div>
 </div>
 
-<!-- PRODUCT 5 -->
 <div class="card">
-<div class="img"><img src="algiz-pendant-terracotta-orange-6cm-protection.jpeg" alt="Pendant"></div>
-<h3>Pendant — 6cm</h3>
-<div class="small">Organic Hard Bake • Wearable</div>
-<div class="price">£14.99 — fixed</div>
-<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
-<select class="select"><option>Algiz ᛉ</option><option>Berkano ᛒ</option><option>Raidho ᚱ</option><option>Fehu ᚠ Money</option><option>No symbol</option><option>Initial</option><option>Custom sigil</option></select>
-<a class="btn" href="https://buy.stripe.com/your_pendant_14_99_link" target="_blank">Buy — £14.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_pendant_32_99_attunement_link" target="_blank">Buy + Attunement — £32.99</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message</a>
+<div class="img"><img src="algiz-pendant-terracotta-orange-6cm-protection.jpg" alt="Pendant"></div>
+<div class="body">
+<h3>Pendant</h3>
+<p class="small">A wearable botanical talisman made to carry your chosen mark close.</p>
+<div class="price">£14.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#pendant">Choose yours →</a>
+</div>
 </div>
 
-<!-- PRODUCT 6 -->
 <div class="card">
 <div class="img"><img src="algiz-wreath-ward-braided-edge-hb-stamp.jpg" alt="Keepsake"></div>
-<h3>Keepsake — Braided Edge</h3>
-<div class="small">Organic Hard Bake • Memorials</div>
-<div class="price">£19.99 — fixed</div>
-<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
-<select class="select"><option>Algiz ᛉ</option><option>Berkano ᛒ</option><option>Raidho ᚱ</option><option>Fehu ᚠ Money</option><option>No symbol</option><option>Initial</option><option>Custom sigil</option></select>
-<a class="btn" href="https://buy.stripe.com/your_keepsake_19_99_link" target="_blank">Buy — £19.99</a>
-<a class="btn clay" href="https://buy.stripe.com/your_keepsake_37_99_attunement_link" target="_blank">Buy + Attunement — £37.99</a>
-<a class="btn ghost" href="https://ig.me/m/heldandbound" target="_blank">Custom? Message</a>
+<div class="body">
+<h3>Keepsake</h3>
+<p class="small">A hand-formed piece for remembrance, marking and keeping.</p>
+<div class="price">£19.99</div>
+<p class="small">4 blends • your choice of mark</p>
+<a class="btn ghost" href="#keepsake">Choose yours →</a>
+</div>
 </div>
 
 </div>
 </section>
 
-<div class="contact">
-<div class="kicker">Something different?</div>
-<h2 style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:500;margin:8px 0">Have something different in mind?</h2>
-<p class="small">Ashes, baby hair, larger set — message me and we'll make it together.</p>
-<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px">
-<a class="btn clay" style="width:auto" href="https://ig.me/m/heldandbound" target="_blank">Message Instagram</a>
-<a class="btn ghost" style="width:auto" href="mailto:hello@humanlabofficial.com">Email</a>
+<section class="section">
+<div class="kicker">Choose your blend</div>
+<h2>Choose your blend</h2>
+<div class="blend-grid">
+<div class="blend"><b>RAW</b><span class="small">Natural cream<br>No added botanical blend. Quiet, simple, unbound.</span></div>
+<div class="blend"><b>MOONMILK</b><span class="small">Soft botanical cream<br>Lavender • Chamomile • Fine Salt<br>Rest • Calm • Intuition</span></div>
+<div class="blend"><b>HEARTFIRE</b><span class="small">Warm paprika / terracotta<br>Paprika • Turmeric<br>Courage • Warmth • Vitality</span></div>
+<div class="blend"><b>CHARCOAL</b><span class="small">Deep smoke / black<br>Charcoal botanical blend<br>Grounding • Protection • Strength</span></div>
 </div>
+<p class="small" style="margin-top:14px"><em>Each Hard Bake blend naturally influences the colour and texture of the finished piece. Variation is part of the handmade process.</em></p>
+</section>
+
+<section class="section">
+<div class="kicker">Choose your mark</div>
+<h2>Choose your mark</h2>
+<div class="mark-grid">
+<div class="mark"><b>ALGIZ ᛉ</b><span class="small">Protection • Defence • Awareness</span></div>
+<div class="mark"><b>BERKANO ᛒ</b><span class="small">Growth • Renewal • Becoming</span></div>
+<div class="mark"><b>RAIDHO ᚱ</b><span class="small">Journey • Direction • Movement</span></div>
+<div class="mark"><b>FEHU ᚠ</b><span class="small">Wealth • Prosperity • Resources</span></div>
+<div class="mark"><b>UNMARKED</b><span class="small">No symbol.</span></div>
+</div>
+<p class="small" style="margin-top:14px">You can also offer:<br><b>Initial / simple custom mark — included where suitable</b></p>
+</section>
+
+<!-- PRODUCT DETAILS — CLEAN, NO REPEATED EXPLANATIONS -->
+<section id="rune-set" class="detail">
+<h3>Rune Set — £27.99</h3>
+<p class="small">24 hand-formed Elder Futhark runes + 1 optional blank, with pouch.<br>Choose blend → choose symbol style → checkout</p>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px">
+<div class="card"><div class="img" style="border-radius:12px;overflow:hidden"><img src="full-rune-set-25pcs-palm-orb-tile-flatlay.jpg" alt="Rune Set"></div></div>
+<div class="card"><div class="img" style="border-radius:12px;overflow:hidden"><img src="elemental-quarter-tile-herb-crust-rosemary.jpg" alt="Tile"></div></div>
+</div>
+<select class="select"><option>Choose blend: RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>Choose mark: ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ</option><option>UNMARKED</option><option>Initial</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_rune_set_27_99_link" target="_blank">Standard — £27.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_rune_set_45_99_link" target="_blank">Personally Attuned — £45.99</a>
+</div>
+</section>
+
+<section id="hanging-talisman" class="detail">
+<h3>Hanging Talisman — £14.99</h3>
+<p class="small">A hand-formed botanical piece made to hang, carry meaning and keep close.</p>
+<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_hanging_14_99_link" target="_blank">Standard — £14.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_hanging_32_99_link" target="_blank">Personally Attuned — £32.99</a>
+</div>
+</section>
+
+<section id="held-stone" class="detail">
+<h3>Held Stone — £9.99</h3>
+<p class="small">A smooth palm stone made to be held, rubbed and returned to.</p>
+<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_held_9_99_link" target="_blank">Standard — £9.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_held_27_99_link" target="_blank">Personally Attuned — £27.99</a>
+</div>
+</section>
+
+<section id="botanical-tile" class="detail">
+<h3>Botanical Tile — £14.99</h3>
+<p class="small">A hand-pressed botanical tile for altar, shelf, desk or symbolic space.</p>
+<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_tile_14_99_link" target="_blank">Standard — £14.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_tile_32_99_link" target="_blank">Personally Attuned — £32.99</a>
+</div>
+</section>
+
+<section id="pendant" class="detail">
+<h3>Pendant — £14.99</h3>
+<p class="small">A wearable botanical talisman made to carry your chosen mark close.</p>
+<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ — Wealth</option><option>UNMARKED</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_pendant_14_99_link" target="_blank">Standard — £14.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_pendant_32_99_link" target="_blank">Personally Attuned — £32.99</a>
+</div>
+</section>
+
+<section id="keepsake" class="detail">
+<h3>Keepsake — £19.99</h3>
+<p class="small">A hand-formed piece for remembrance, marking and keeping.</p>
+<select class="select"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select class="select"><option>ALGIZ ᛉ</option><option>BERKANO ᛒ</option><option>RAIDHO ᚱ</option><option>FEHU ᚠ</option><option>UNMARKED</option></select>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px">
+<a class="btn" href="https://buy.stripe.com/your_keepsake_19_99_link" target="_blank">Standard — £19.99</a>
+<a class="btn clay" href="https://buy.stripe.com/your_keepsake_37_99_link" target="_blank">Personally Attuned — £37.99</a>
 </div>
 
-<footer>© HELD & BOUND • Fixed price • Fehu Money added • Attunement +£18</footer>
+<div class="order-mini">
+<form action="https://formsubmit.co/hello@humanlabofficial.com" method="POST">
+<input type="hidden" name="Product" value="Keepsake">
+<input type="text" name="Name" placeholder="Name" required>
+<input type="text" name="Email" placeholder="Email" required style="margin-top:8px">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:8px">
+<select name="Blend"><option>RAW</option><option>MOONMILK</option><option>HEARTFIRE</option><option>CHARCOAL</option></select>
+<select name="Mark"><option>ALGIZ</option><option>BERKANO</option><option>RAIDHO</option><option>FEHU</option><option>UNMARKED</option></select>
+<input type="text" name="Stripe ref" placeholder="Stripe ref">
+</div>
+<textarea name="Attunement" placeholder="Attunement details if applicable" style="margin-top:8px"></textarea>
+<button class="btn" type="submit">Send selections</button>
+</form>
+</div>
+</section>
+
+<section class="section">
+<div class="kicker">Bespoke</div>
+<h2>Something else in mind?</h2>
+<p class="small">Memorial inclusions, ashes, hair, custom botanical combinations, larger pieces, custom sigils and unusual commissions are quoted individually.</p>
+<div style="margin-top:14px">
+<a class="btn clay" style="width:auto;padding:12px 22px" href="https://ig.me/m/heldandbound" target="_blank">Message HELD & BOUND →</a>
+</div>
+</section>
+
+<footer>© HELD & BOUND • Botanical • Symbolic • Small Batch<br>Personal Attunement is offered as a symbolic and ritual practice. No specific outcome is guaranteed.</footer>
 </main>
 </body>
 </html>
