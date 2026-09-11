@@ -110,16 +110,46 @@ footer{padding:32px 0 48px;text-align:center;font-size:11px;color:var(--ink2);op
 </div>
 
 <div class="step" id="step3">
-<div class="step-head"><div class="step-num">3</div><div><h3>Choose the intention blend</h3><p class="sub">Herbs bound into the clay — not a list, a territory</p></div></div>
+<div class="step-head"><div class="step-num">3</div><div><h3>Choose the intention blend</h3><p class="sub">Herbs bound into the clay — not a list, a territory. Or choose raw.</p></div></div>
 <div class="grid grid-3" style="margin-top:14px">
+<div class="card" data-type="blend" data-value="Raw / Natural"><b>Raw / Natural</b><div class="choice-desc">No herbs, just clay. Pure, quiet, untouched.</div><div class="small">Plain — for purists</div></div>
 <div class="card" data-type="blend" data-value="Herbbound"><b>Herbbound</b><div class="choice-desc">Rosemary, basil, black pepper — grounding, protection, clarity.</div></div>
 <div class="card" data-type="blend" data-value="Heartfire"><b>Heartfire</b><div class="choice-desc">Paprika, turmeric — warmth, courage, vitality.</div></div>
 <div class="card" data-type="blend" data-value="Quiet Abundance"><b>Quiet Abundance</b><div class="choice-desc">Lavender + prosperity blend — calm abundance.</div></div>
 <div class="card" data-type="blend" data-value="Keeper"><b>Keeper</b><div class="choice-desc">Rosemary, bay, black pepper — boundaries, held safe.</div></div>
 <div class="card" data-type="blend" data-value="Moonmilk"><b>Moonmilk</b><div class="choice-desc">Lavender, chamomile, salt — rest, intuition.</div></div>
 <div class="card" data-type="blend" data-value="Wildwood"><b>Wildwood</b><div class="choice-desc">Rosemary, thyme, sage — nature, instinct, rooted.</div></div>
+<div class="card" data-type="blend" data-value="Choose Your Own"><b>Choose Your Own</b><div class="choice-desc">Pick up to 3 herbs from our apothecary list.</div><div class="small">Custom blend +£2</div></div>
+</div>
+
+<div id="customHerbPicker" style="display:none;margin-top:18px;padding:18px;border:1px dashed var(--line);border-radius:14px;background:rgba(255,255,255,0.7)">
+<div class="kicker" style="margin-bottom:10px">Choose up to 3 herbs — sacred, small-batch</div>
+<div class="grid grid-4" style="gap:8px">
+<label class="herb-opt"><input type="checkbox" value="Rosemary"> Rosemary — protection, clarity</label>
+<label class="herb-opt"><input type="checkbox" value="Basil"> Basil — abundance, home</label>
+<label class="herb-opt"><input type="checkbox" value="Black Pepper"> Black Pepper — boundaries, resilience</label>
+<label class="herb-opt"><input type="checkbox" value="Bay"> Bay — guardianship, keeping</label>
+<label class="herb-opt"><input type="checkbox" value="Sage"> Sage — cleansing, instinct</label>
+<label class="herb-opt"><input type="checkbox" value="Thyme"> Thyme — courage, nature</label>
+<label class="herb-opt"><input type="checkbox" value="Lavender"> Lavender — calm, intuition</label>
+<label class="herb-opt"><input type="checkbox" value="Chamomile"> Chamomile — rest, softness</label>
+<label class="herb-opt"><input type="checkbox" value="Paprika"> Paprika — warmth, vitality</label>
+<label class="herb-opt"><input type="checkbox" value="Turmeric"> Turmeric — confidence, fire</label>
+<label class="herb-opt"><input type="checkbox" value="Cinnamon"> Cinnamon — abundance, forward</label>
+<label class="herb-opt"><input type="checkbox" value="Clove"> Clove — protection, depth</label>
+<label class="herb-opt"><input type="checkbox" value="Ginger"> Ginger — momentum, heat</label>
+<label class="herb-opt"><input type="checkbox" value="Fine Salt"> Fine Salt — purification, grounding</label>
+</div>
+<div class="small" id="herbCount" style="margin-top:10px;color:var(--sage)">Pick 1–3 herbs. No more than 3 to keep it potent.</div>
 </div>
 </div>
+
+<style>
+.herb-opt{font-size:12px;display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line2);border-radius:10px;background:var(--paper2);cursor:pointer}
+.herb-opt input{accent-color:var(--clay)}
+.herb-opt:has(input:checked){background:#fff;border-color:var(--clay)}
+</style>
+
 
 <div class="step" id="step4">
 <div class="step-head"><div class="step-num">4</div><div><h3>Choose the symbol</h3><p class="sub">What mark is carved while soft</p></div></div>
@@ -207,14 +237,26 @@ function updateSteps(){
 }
 function updateSummary(){
   let lines = [];
+  let blendExtra = 0;
+  let blendDisplay = state.blend;
+  if(state.blend === 'Choose Your Own'){
+    blendExtra = 2;
+    if(customHerbs.length>0){
+      blendDisplay = 'Custom: ' + customHerbs.join(', ');
+    } else {
+      blendDisplay = 'Choose Your Own — pick herbs below';
+    }
+  } else if(state.blend === 'Raw / Natural'){
+    blendDisplay = 'Raw / Natural — no herbs';
+  }
   if(state.object) lines.push('<b>' + state.object + '</b> — £' + state.objectPrice.toFixed(2));
   if(state.material) lines.push(state.material + (state.materialPrice>0 ? ' +£' + state.materialPrice.toFixed(2) : ''));
-  if(state.blend) lines.push(state.blend);
+  if(state.blend) lines.push(blendDisplay + (blendExtra>0 ? ' +£' + blendExtra.toFixed(2) : ''));
   if(state.symbol) lines.push(state.symbol + (state.symbolPrice>0 ? ' +£' + state.symbolPrice : ''));
   if(state.personalization) lines.push('<em>' + state.personalization + '</em>');
   if(lines.length===0) lines.push('Choose an object to begin. Soft, sacred, made to be held.');
   document.getElementById('summaryLines').innerHTML = lines.join('<br>');
-  let total = state.objectPrice + state.materialPrice + state.symbolPrice;
+  let total = state.objectPrice + state.materialPrice + state.symbolPrice + blendExtra;
   document.getElementById('totalPrice').innerText = total>0 ? '£' + total.toFixed(2) : '£0.00';
   const stockInfo = document.getElementById('stockInfo');
   if(state.symbol && ['Algiz','Berkano','Raidho','Cross'].includes(state.symbol)){
@@ -232,6 +274,24 @@ function updateSummary(){
     btn.innerText = 'Buy now — £' + total.toFixed(2);
   }
 }
+let customHerbs = [];
+function updateCustomHerbDisplay(){
+  const picker = document.getElementById('customHerbPicker');
+  const countEl = document.getElementById('herbCount');
+  if(state.blend === 'Choose Your Own'){
+    picker.style.display = 'block';
+  } else {
+    picker.style.display = 'none';
+  }
+  if(customHerbs.length>0){
+    countEl.innerText = customHerbs.length + '/3 selected: ' + customHerbs.join(', ');
+    countEl.style.color = 'var(--ink)';
+  } else {
+    countEl.innerText = 'Pick 1–3 herbs. No more than 3 to keep it potent.';
+    countEl.style.color = 'var(--sage)';
+  }
+}
+
 document.querySelectorAll('.card[data-type]').forEach(card=>{
   card.addEventListener('click', ()=>{
     let type = card.dataset.type;
@@ -248,11 +308,33 @@ document.querySelectorAll('.card[data-type]').forEach(card=>{
       updateMaterialPricing();
     }
     if(type==='material'){ state.material=value; state.materialPrice=price; }
-    if(type==='blend'){ state.blend=value; }
+    if(type==='blend'){
+      state.blend=value;
+      // reset custom herbs if not custom
+      if(value !== 'Choose Your Own'){
+        customHerbs = [];
+        document.querySelectorAll('#customHerbPicker input').forEach(i=>i.checked=false);
+      }
+      updateCustomHerbDisplay();
+    }
     if(type==='symbol'){ state.symbol=value; state.symbolPrice=price; }
     updateSteps(); updateSummary();
   });
 });
+
+document.querySelectorAll('#customHerbPicker input').forEach(input=>{
+  input.addEventListener('change', ()=>{
+    if(input.checked && customHerbs.length >= 3){
+      input.checked = false;
+      alert('Choose up to 3 herbs to keep the blend potent — sacred, not crowded.');
+      return;
+    }
+    customHerbs = Array.from(document.querySelectorAll('#customHerbPicker input:checked')).map(i=>i.value);
+    updateCustomHerbDisplay();
+    updateSummary();
+  });
+});
+
 document.getElementById('personalization').addEventListener('input', e=>{ state.personalization=e.target.value; updateSummary(); });
 updateSteps(); updateSummary();
 </script>
