@@ -50,7 +50,7 @@ tailwind.config = {
 <style>
 *{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
 .no-scrollbar::-webkit-scrollbar{display:none;} .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
-.carousel-track{transition:transform 0.45s cubic-bezier(0.32,0.72,0,1);}
+.carousel-track{transition:transform 0.45s cubic-bezier(0.32,0.72,0,1);will-change:transform;}
 .select-premium{
   appearance:none;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2357534E' stroke-width='1.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
@@ -103,7 +103,7 @@ tailwind.config = {
        <!-- 2. RUNE SETS -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="rune-set" data-price="125">
       <div class="relative aspect-square bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex h-full" style="width:300%">
             <img src="images/rune-set/charcoal.jpg" alt="Elder Futhark Rune Set Charcoal" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
             <img src="images/rune-set/moonmilk.jpg" alt="Elder Futhark Rune Set Moonmilk" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
@@ -147,7 +147,7 @@ tailwind.config = {
        <!-- 1. PENDANTS -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="pendants" data-price="38">
       <div class="relative aspect-square bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex h-full" style="width:300%">
             <img src="images/pendants/charcoal.jpg" alt="Algiz Rune Protection Pendant Charcoal" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
             <img src="images/pendants/moonmilk.jpg" alt="Algiz Rune Protection Pendant Moonmilk" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
@@ -198,7 +198,7 @@ tailwind.config = {
            <!-- 3. INCENSE HOLDERS -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="incense-holders" data-price="53">
       <div class="relative aspect-square bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex h-full" style="width:300%">
             <img src="images/incense-holders/charcoal.jpg" alt="Sacred Space Incense Burner Charcoal" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
             <img src="images/incense-holders/moonmilk.jpg" alt="Sacred Space Incense Burner Moonmilk" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
@@ -250,7 +250,7 @@ tailwind.config = {
         <!-- 4. WORRY STONES -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="worry-stones" data-price="26">
       <div class="relative aspect-square bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex h-full" style="width:300%">
             <img src="images/worry-stones/charcoal.jpg" alt="Grounding Worry Stone Charcoal" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
             <img src="images/worry-stones/moonmilk.jpg" alt="Grounding Worry Stone Moonmilk" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
@@ -294,7 +294,7 @@ tailwind.config = {
                <!-- 5. HANGING TALISMAN -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="hanging-talismans" data-price="32">
       <div class="relative aspect-square bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex h-full" style="width:300%">
             <img src="images/hanging-talisman/charcoal.jpg" alt="Hanging Protection Talisman Charcoal - volcanic texture" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
             <img src="images/hanging-talisman/moonmilk.jpg" alt="Hanging Protection Talisman Moonmilk - herbs visible" class="h-full object-cover shrink-0" style="width:33.3333%" loading="lazy">
@@ -345,7 +345,7 @@ tailwind.config = {
     <!-- 6. CLAY - ONE OF ONE -->
     <div class="product-card group bg-white border border-line rounded-[28px] overflow-hidden" data-product="clay-one-off" data-price="42">
       <div class="relative aspect-[1.05] bg-stone overflow-hidden">
-        <div class="carousel relative w-full h-full">
+        <div class="carousel relative w-full h-full select-none" style="touch-action:pan-y;">
           <div class="carousel-track flex w-[300%] h-full">
             <img src="images/clay-one/clay1.jpg" alt="Clay One Off No. 01 - Moonmilk herbal" class="w-1/3 h-full object-cover" loading="lazy">
             <img src="images/clay-one/clay2.jpg" alt="Clay One Off No. 02 - Charcoal texture" class="w-1/3 h-full object-cover" loading="lazy">
@@ -552,68 +552,99 @@ document.querySelectorAll('.product-card').forEach(card => {
   if(prevBtn) prevBtn.addEventListener('click', ()=> updateCarousel(currentIndex - 1));
   if(nextBtn) nextBtn.addEventListener('click', ()=> updateCarousel(currentIndex + 1));
 
-  // Touch swipe support
-  if(carousel){
+  // Touch + pointer swipe support
+  // Uses Pointer Events so swipe works on modern phones, tablets and desktop trackpads/mice.
+  // Vertical page scrolling is preserved with touch-action: pan-y.
+  if(carousel && track){
+    carousel.style.touchAction = 'pan-y';
+    carousel.style.cursor = 'grab';
+
     let startX = 0;
     let currentX = 0;
     let isDragging = false;
+    let pointerId = null;
 
-    carousel.addEventListener('touchstart', (e)=>{
-      startX = e.touches[0].clientX;
-      isDragging = true;
-      track.style.transition = 'none';
-    }, {passive:true});
+    function slidePercent(){
+      return isThree ? 33.333333 : 50;
+    }
 
-    carousel.addEventListener('touchmove', (e)=>{
-      if(!isDragging) return;
-      currentX = e.touches[0].clientX;
-      const diff = currentX - startX;
-      const percent = (diff / carousel.clientWidth) * 50;
-      const baseTranslate = -currentIndex * 50;
+    function dragTranslate(diff){
+      const step = slidePercent();
+      const percent = (diff / carousel.clientWidth) * step;
+      const baseTranslate = -currentIndex * step;
       track.style.transform = `translateX(${baseTranslate + percent}%)`;
-    }, {passive:true});
+    }
 
-    carousel.addEventListener('touchend', (e)=>{
+    function finishSwipe(){
       if(!isDragging) return;
-      isDragging = false;
-      track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
-      const diff = currentX - startX;
-      if(Math.abs(diff) > 40){
-        if(diff < 0) updateCarousel(currentIndex + 1);
-        else updateCarousel(currentIndex - 1);
-      } else {
-        updateCarousel(currentIndex);
-      }
-    });
 
-    // Mouse drag for desktop
-    let mouseDown = false;
-    carousel.addEventListener('mousedown', (e)=>{
-      mouseDown = true;
-      startX = e.clientX;
-      track.style.transition = 'none';
-      carousel.style.cursor = 'grabbing';
-    });
-    window.addEventListener('mouseup', ()=>{
-      if(!mouseDown) return;
-      mouseDown = false;
+      const diff = currentX - startX;
+      isDragging = false;
+
+      if(pointerId !== null){
+        try { carousel.releasePointerCapture(pointerId); } catch(e) {}
+      }
+      pointerId = null;
+
       track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
       carousel.style.cursor = 'grab';
-      const diff = currentX - startX;
+
       if(Math.abs(diff) > 40){
         if(diff < 0) updateCarousel(currentIndex + 1);
         else updateCarousel(currentIndex - 1);
       } else {
         updateCarousel(currentIndex);
       }
-    });
-    carousel.addEventListener('mousemove', (e)=>{
-      if(!mouseDown) return;
+    }
+
+    carousel.addEventListener('pointerdown', (e)=>{
+      // Only start a swipe for the primary pointer.
+      if(e.isPrimary === false) return;
+
+      // Don't hijack clicks/drags originating from form controls.
+      if(e.target.closest('button, select, input, textarea, a')) return;
+
+      startX = e.clientX;
       currentX = e.clientX;
-      const diff = currentX - startX;
-      const percent = (diff / carousel.clientWidth) * 50;
-      const baseTranslate = -currentIndex * 50;
-      track.style.transform = `translateX(${baseTranslate + percent}%)`;
+      isDragging = true;
+      pointerId = e.pointerId;
+
+      track.style.transition = 'none';
+      carousel.style.cursor = 'grabbing';
+
+      try { carousel.setPointerCapture(pointerId); } catch(err) {}
+    });
+
+    carousel.addEventListener('pointermove', (e)=>{
+      if(!isDragging || e.pointerId !== pointerId) return;
+
+      currentX = e.clientX;
+      dragTranslate(currentX - startX);
+    });
+
+    carousel.addEventListener('pointerup', (e)=>{
+      if(e.pointerId !== pointerId) return;
+      currentX = e.clientX;
+      finishSwipe();
+    });
+
+    carousel.addEventListener('pointercancel', ()=>{
+      if(!isDragging) return;
+      isDragging = false;
+      pointerId = null;
+      track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
+      carousel.style.cursor = 'grab';
+      updateCarousel(currentIndex);
+    });
+
+    carousel.addEventListener('lostpointercapture', ()=>{
+      if(!isDragging) return;
+      finishSwipe();
+    });
+
+    // Prevent the browser's native image drag from interfering with swipes.
+    carousel.querySelectorAll('img').forEach(img=>{
+      img.draggable = false;
     });
   }
 
