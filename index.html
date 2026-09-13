@@ -85,6 +85,14 @@ tailwind.config = {
   <h1 class="font-serif text-[42px] md:text-[72px] leading-[0.9] font-[500] tracking-[-0.02em] max-w-[760px] mx-auto">
     Hand-formed,<br>ritual art made with <em class="font-[400] italic">intention.</em>
   </h1>
+  <!-- TINY BLACK BUTTON - Earth Minerals -->
+<div class="mt-7 flex justify-center">
+  <button id="heroPlayBtn" class="h-[28px] inline-flex items-center gap-2 px-4 rounded-full bg-ink text-paper text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition">
+    <span id="heroPlayIcon" class="text-[9px] leading-none ml-[1px]">▶</span>
+    <span id="heroPlayText">Studio Sound — Earth Minerals</span>
+  </button>
+  <audio id="heroAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
+</div>
   <p class="mt-6 md:mt-8 text-[15px] md:text-[17px] leading-[1.6] text-ink2 max-w-[520px] mx-auto">
    Choose your piece, then select your finish: deep Volcanic Charcoal, raw minimal Clay, or our signature botanical Moonmilk infused with real lavender, basil, and black pepper.
   </p>
@@ -403,7 +411,7 @@ tailwind.config = {
   <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-16 md:py-24 grid md:grid-cols-3 gap-10 md:gap-16">
     <div>
       <p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-ink2 mb-4">01 — Material</p>
-      <h3 class="font-serif text-[20px] font-medium leading-[1.2]">Two blends only. Ancient Stone + Moonmilk.</h3>
+      <h3 class="font-serif text-[20px] font-medium leading-[1.2]">Three blends only. Ancient Stone + Moonmilk + raw clay.</h3>
       <p class="mt-3 text-[13px] leading-[1.6] text-ink2">Ancient Stone is textured charcoal — deep smoke black, rough mineral, intentional crackle. Moonmilk is speckled herbal — lavender, basil & coarse black pepper in soft cream clay.</p>
     </div>
     <div>
@@ -731,6 +739,24 @@ function showToast(msg){
     toast.style.transform = 'translate(-50%, 20px)';
     setTimeout(()=> toast.classList.add('hidden'), 300);
   }, 3000);
+}
+  const heroBtn = document.getElementById('heroPlayBtn');
+const heroIcon = document.getElementById('heroPlayIcon');
+const heroText = document.getElementById('heroPlayText');
+const heroAudio = document.getElementById('heroAudio');
+if(heroBtn && heroAudio){
+  heroAudio.volume = 0.35;
+  heroBtn.addEventListener('click', async ()=>{
+    if(heroAudio.paused){
+      await heroAudio.play();
+      heroIcon.textContent = '❚❚';
+      heroText.textContent = 'Playing — Earth Minerals';
+    } else {
+      heroAudio.pause();
+      heroIcon.textContent = '▶';
+      heroText.textContent = 'Studio Sound — Earth Minerals';
+    }
+  });
 }
 </script>
 </body>
