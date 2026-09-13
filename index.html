@@ -427,23 +427,6 @@ tailwind.config = {
   </div>
 </section>
 
-<!-- STUDIO SOUND - FIXED -->
-<section class="bg-white border-y border-line">
-  <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-8 flex items-center justify-between gap-4">
-    <div class="flex items-center gap-4">
-      <button id="earthPlayBtn" class="w-11 h-11 rounded-full bg-ink text-paper flex items-center justify-center hover:bg-zinc-800 transition">
-        <span id="earthPlayIcon" class="text-[12px] ml-[1px]">▶</span>
-      </button>
-      <div>
-        <p class="font-serif text-[16px] leading-none">Studio Sound — Earth Minerals</p>
-        <p class="mt-1 text-[10px] tracking-[0.14em] uppercase text-ink2">Loop • Low volume • Play while you browse</p>
-      </div>
-    </div>
-    <span class="hidden md:block text-[11px] text-ink2">Volcanic • Herbal • Clay</span>
-  </div>
-  <audio id="earthAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
-</section>
-
 <script>
   const btn = document.getElementById('earthPlayBtn');
   const icon = document.getElementById('earthPlayIcon');
