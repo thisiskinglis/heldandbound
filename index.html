@@ -434,20 +434,26 @@ const stripeLinks = {
 
   // Worry Stones - 2 variants
   "worry-stones-charcoal": "https://buy.stripe.com/test_worry_charcoal",
-  "worry-stones-moonmilk": "https://buy.stripe.com/test_worry_moonmilk"
-  "hanging-talismans-protection-charcoal": "https://buy.stripe.com/...",
-"hanging-talismans-protection-moonmilk": "...",
-"hanging-talismans-home-protection-charcoal": "...",
-"hanging-talismans-home-protection-moonmilk": "...",
-"clay-one-off-01": "...",
-"clay-one-off-02": "...",
-"clay-one-off-03": "...",
+  "worry-stones-moonmilk": "https://buy.stripe.com/test_worry_moonmilk",
+
+  // Hanging Talismans - 4 variants
+  "hanging-talismans-protection-charcoal": "https://buy.stripe.com/test_hanging_protection_charcoal",
+  "hanging-talismans-protection-moonmilk": "https://buy.stripe.com/test_hanging_protection_moonmilk",
+  "hanging-talismans-home-protection-charcoal": "https://buy.stripe.com/test_hanging_home_charcoal",
+  "hanging-talismans-home-protection-moonmilk": "https://buy.stripe.com/test_hanging_home_moonmilk",
+
+  // One-Off Pieces - individual pieces
+  "clay-one-off-01": "https://buy.stripe.com/test_oneoff_01",
+  "clay-one-off-02": "https://buy.stripe.com/test_oneoff_02",
+  "clay-one-off-03": "https://buy.stripe.com/test_oneoff_03",
+  "clay-one-off-04": "https://buy.stripe.com/test_oneoff_04"
 };
 
 // Helper to normalize intention values to lookup keys
 function normalizeIntention(val){
   if(!val) return '';
   val = val.toLowerCase();
+  if(val.includes('home') && val.includes('protection')) return 'home-protection';
   if(val.includes('protection') || val === 'algiz') return 'protection';
   if(val.includes('abundance') || val.includes('fehu')) return 'abundance';
   if(val.includes('sacred')) return 'sacred-space';
@@ -462,15 +468,25 @@ document.querySelectorAll('.product-card').forEach(card => {
   const nextBtn = card.querySelector('.carousel-next');
   const colorSelect = card.querySelector('.color-select');
   const intentionSelect = card.querySelector('.intention-select');
+  const pieceSelect = card.querySelector('.piece-select');
   const buyBtn = card.querySelector('.buy-btn');
   const carousel = card.querySelector('.carousel');
 
-  let currentIndex = 0; // 0 = charcoal, 1 = moonmilk
-  const total = 2;
+  let currentIndex = 0;
+  const isThree = card.dataset.product === 'clay-one-off';
+  const total = isThree ? 3 : 2;
 
   function updateCarousel(index){
     currentIndex = Math.max(0, Math.min(total-1, index));
-    track.style.transform = `translateX(-${currentIndex * 50}%)`;
+    if(track){
+      if(track){
+      if(isThree){
+        track.style.transform = `translateX(-${currentIndex * 33.333}%)`;
+      } else {
+        track.style.transform = `translateX(-${currentIndex * 50}%)`;
+      }
+    }
+    }
     dots.forEach((dot,i)=>{
       dot.className = `dot w-1.5 h-1.5 rounded-full transition-all ${i===currentIndex ? 'bg-ink w-3' : 'bg-ink/30'}`;
     });
@@ -497,97 +513,106 @@ document.querySelectorAll('.product-card').forEach(card => {
   if(nextBtn) nextBtn.addEventListener('click', ()=> updateCarousel(currentIndex + 1));
 
   // Touch swipe support
-  let startX = 0;
-  let currentX = 0;
-  let isDragging = false;
+  if(carousel){
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
 
-  carousel.addEventListener('touchstart', (e)=>{
-    startX = e.touches[0].clientX;
-    isDragging = true;
-    track.style.transition = 'none';
-  }, {passive:true});
+    carousel.addEventListener('touchstart', (e)=>{
+      startX = e.touches[0].clientX;
+      isDragging = true;
+      track.style.transition = 'none';
+    }, {passive:true});
 
-  carousel.addEventListener('touchmove', (e)=>{
-    if(!isDragging) return;
-    currentX = e.touches[0].clientX;
-    const diff = currentX - startX;
-    const percent = (diff / carousel.clientWidth) * 50;
-    const baseTranslate = -currentIndex * 50;
-    track.style.transform = `translateX(${baseTranslate + percent}%)`;
-  }, {passive:true});
+    carousel.addEventListener('touchmove', (e)=>{
+      if(!isDragging) return;
+      currentX = e.touches[0].clientX;
+      const diff = currentX - startX;
+      const percent = (diff / carousel.clientWidth) * 50;
+      const baseTranslate = -currentIndex * 50;
+      track.style.transform = `translateX(${baseTranslate + percent}%)`;
+    }, {passive:true});
 
-  carousel.addEventListener('touchend', (e)=>{
-    if(!isDragging) return;
-    isDragging = false;
-    track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
-    const diff = currentX - startX;
-    if(Math.abs(diff) > 40){
-      if(diff < 0) updateCarousel(currentIndex + 1);
-      else updateCarousel(currentIndex - 1);
-    } else {
-      updateCarousel(currentIndex);
-    }
-  });
+    carousel.addEventListener('touchend', (e)=>{
+      if(!isDragging) return;
+      isDragging = false;
+      track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
+      const diff = currentX - startX;
+      if(Math.abs(diff) > 40){
+        if(diff < 0) updateCarousel(currentIndex + 1);
+        else updateCarousel(currentIndex - 1);
+      } else {
+        updateCarousel(currentIndex);
+      }
+    });
 
-  // Mouse drag for desktop
-  let mouseDown = false;
-  carousel.addEventListener('mousedown', (e)=>{
-    mouseDown = true;
-    startX = e.clientX;
-    track.style.transition = 'none';
-    carousel.style.cursor = 'grabbing';
-  });
-  window.addEventListener('mouseup', ()=>{
-    if(!mouseDown) return;
-    mouseDown = false;
-    track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
-    carousel.style.cursor = 'grab';
-    const diff = currentX - startX;
-    if(Math.abs(diff) > 40){
-      if(diff < 0) updateCarousel(currentIndex + 1);
-      else updateCarousel(currentIndex - 1);
-    } else {
-      updateCarousel(currentIndex);
-    }
-  });
-  carousel.addEventListener('mousemove', (e)=>{
-    if(!mouseDown) return;
-    currentX = e.clientX;
-    const diff = currentX - startX;
-    const percent = (diff / carousel.clientWidth) * 50;
-    const baseTranslate = -currentIndex * 50;
-    track.style.transform = `translateX(${baseTranslate + percent}%)`;
-  });
+    // Mouse drag for desktop
+    let mouseDown = false;
+    carousel.addEventListener('mousedown', (e)=>{
+      mouseDown = true;
+      startX = e.clientX;
+      track.style.transition = 'none';
+      carousel.style.cursor = 'grabbing';
+    });
+    window.addEventListener('mouseup', ()=>{
+      if(!mouseDown) return;
+      mouseDown = false;
+      track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
+      carousel.style.cursor = 'grab';
+      const diff = currentX - startX;
+      if(Math.abs(diff) > 40){
+        if(diff < 0) updateCarousel(currentIndex + 1);
+        else updateCarousel(currentIndex - 1);
+      } else {
+        updateCarousel(currentIndex);
+      }
+    });
+    carousel.addEventListener('mousemove', (e)=>{
+      if(!mouseDown) return;
+      currentX = e.clientX;
+      const diff = currentX - startX;
+      const percent = (diff / carousel.clientWidth) * 50;
+      const baseTranslate = -currentIndex * 50;
+      track.style.transform = `translateX(${baseTranslate + percent}%)`;
+    });
+  }
 
   // Stripe Buy Now logic
-  buyBtn.addEventListener('click', ()=>{
-    const color = colorSelect ? colorSelect.value : 'charcoal';
-    const intentionRaw = intentionSelect ? intentionSelect.value : '';
-    const intention = normalizeIntention(intentionRaw);
+  if(buyBtn){
+    buyBtn.addEventListener('click', ()=>{
+      const color = colorSelect ? colorSelect.value : 'charcoal';
+      const intentionRaw = intentionSelect ? intentionSelect.value : '';
+      const intention = normalizeIntention(intentionRaw);
+      const piece = pieceSelect ? pieceSelect.value : '';
 
-    let key = '';
-    if(productId === 'pendants'){
-      key = `${productId}-${intention}-${color}`;
-    } else if(productId === 'incense-holders'){
-      key = `${productId}-${intention}-${color}`;
-    } else {
-      // rune-set and worry-stones have only color
-      key = `${productId}-${color}`;
-    }
-
-    const url = stripeLinks[key];
-    if(!url || url.includes('REPLACE') || url.includes('test_')){
-      // Show toast with key so user knows what to replace
-      showToast(`Stripe link missing for ${key} — replace in stripeLinks object`);
-      console.log('Stripe lookup key:', key, 'URL:', url);
-      // For demo, still allow redirect if placeholder exists
-      if(url){
-        setTimeout(()=>{ window.location.href = url; }, 800);
+      let key = '';
+      if(productId === 'one-off' || productId === 'clay-one-off'){
+        key = `${productId}-${piece}`;
+      } else if(productId === 'pendants'){
+        key = `${productId}-${intention}-${color}`;
+      } else if(productId === 'incense-holders'){
+        key = `${productId}-${intention}-${color}`;
+      } else if(productId === 'hanging-talismans'){
+        key = `${productId}-${intention}-${color}`;
+      } else {
+        // rune-set and worry-stones have only color
+        key = `${productId}-${color}`;
       }
-      return;
-    }
-    window.location.href = url;
-  });
+
+      const url = stripeLinks[key];
+      if(!url || url.includes('REPLACE') || url.includes('test_')){
+        // Show toast with key so user knows what to replace
+        showToast(`Stripe link missing for ${key} — replace in stripeLinks object`);
+        console.log('Stripe lookup key:', key, 'URL:', url);
+        // For demo, still allow redirect if placeholder exists
+        if(url){
+          setTimeout(()=>{ window.location.href = url; }, 800);
+        }
+        return;
+      }
+      window.location.href = url;
+    });
+  }
 
   // Init
   updateCarousel(0);
