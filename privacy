@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Held & Bound</title>
+<meta name="description" content="Privacy Policy for Held & Bound — Stripe payments, SEO metadata, og-images, newsletter, UK GDPR.">
+<link rel="canonical" href="https://heldandbound.humanlabofficial.com/privacy.html">
+<meta property="og:image" content="https://heldandbound.humanlabofficial.com/images/pendants/moonmilk.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#F9F5EF] text-[#1C1917] font-sans antialiased">
+<header class="max-w-[900px] mx-auto px-6 md:px-10 py-12 border-b border-[rgba(28,25,23,0.10)]">
+<a href="/" class="font-serif text-[22px] font-semibold">HELD & BOUND</a>
+<h1 class="font-serif text-[40px] md:text-[54px] leading-[0.95] mt-8">Privacy Policy & Cookies</h1>
+<p class="text-[12px] tracking-[0.14em] uppercase text-[#57534E] mt-3">Last updated: 13 September 2026 — UK GDPR</p>
+</header>
+<main class="max-w-[900px] mx-auto px-6 md:px-10 py-12 md:py-16">
+<div class="space-y-10 text-[15px] leading-[1.7] text-[#57534E]">
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">1. Who we are</p><p class="mt-3">Controller: Held & Bound, Wrenbury Drive, Northwich, Cheshire, UK CW9 8RW, hello@heldandbound.com, https://heldandbound.humanlabofficial.com/.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">2. What we collect</p><ul class="mt-3 list-disc ml-5 space-y-2">
+<li>Order data: name, email, shipping address, phone, chosen blend (Charcoal/Moonmilk/Plain), chosen bind rune/intention, One-Off piece number</li>
+<li>Payment: Stripe only — we never store cards. Stripe is independent controller.</li>
+<li>Newsletter: email if you opt in at checkout/footer</li>
+<li>Communication: emails to hello@heldandbound.com</li>
+<li>Technical/SEO: IP, browser, device, pages viewed, referrer, og-image, og:title, og:description, twitter:card metadata, Google Fonts and Tailwind CDN requests</li>
+</ul></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">3. Lawful basis</p><ul class="mt-3 list-disc ml-5"><li>Contract: fulfil orders</li><li>Legitimate interest: improve site, SEO, fraud prevention</li><li>Consent: newsletter & non-essential cookies</li><li>Legal: HMRC 6-year records</li></ul></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">4. Who we share with</p><ul class="mt-3 list-disc ml-5 space-y-2">
+<li>Stripe — payments</li>
+<li>Royal Mail / couriers — delivery</li>
+<li>Hosting / HumanLab — site hosting for https://heldandbound.humanlabofficial.com/</li>
+<li>Google Fonts & Tailwind CDN — fonts/style, may log IP</li>
+<li>Email provider — only if you opt into newsletter</li>
+</ul><p class="mt-3">We never sell data.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">5. Newsletter</p><p class="mt-3">Opt-in checkbox: Studio drops & ritual notes. Unsubscribe anytime via link or hello@heldandbound.com. Kept until unsubscribe.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">6. Retention</p><p class="mt-3">Orders 6 years HMRC. Emails 3 years. Newsletter until unsubscribe. Logs 12 months.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">7. Your rights</p><p class="mt-3">Access, correct, delete, restrict, object, portability, withdraw consent. Email hello@heldandbound.com. Complain to ICO ico.org.uk. 30 days response.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">8. Cookies & SEO</p><p class="mt-3">Essential: Stripe checkout session. Functional: Google Fonts, Tailwind. SEO: og-image, og:title, og:description, twitter:card for link previews — not tracking cookies, but platforms may log clicks. No advertising cookies currently. If we add Google Analytics/Meta Pixel later, we will update policy + show banner.</p></div>
+<div><p class="text-[11px] tracking-[0.18em] uppercase font-semibold text-[#1C1917]">9. Contact</p><p class="mt-3">hello@heldandbound.com — Wrenbury Drive, Northwich, Cheshire, UK CW9 8RW</p></div>
+</div>
+</main>
+<footer class="max-w-[900px] mx-auto px-6 md:px-10 py-12 border-t border-[rgba(28,25,23,0.10)] text-[11px] uppercase">© 2026 Held & Bound</footer>
+</body>
+</html>
