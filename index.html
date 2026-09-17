@@ -86,39 +86,39 @@ tailwind.config = {
     Hand-formed,<br>ritual art made with <em class="font-[400] italic">intention.</em>
   </h1>
   <!-- TINY BLACK BUTTON - Earth Minerals -->
-<div class="mt-7 flex justify-center">
-  <button id="heroPlayBtn" class="h-[28px] inline-flex items-center gap-2 px-4 rounded-full bg-ink text-paper text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition">
-    <span id="heroPlayIcon" class="text-[9px] leading-none ml-[1px]">▶</span>
-    <span id="heroPlayText">Studio Sound — Earth Minerals</span>
-  </button>
-  <audio id="heroAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
-</div>
+  <div class="mt-7 flex justify-center">
+    <button id="heroPlayBtn" class="h-[28px] inline-flex items-center gap-2 px-4 rounded-full bg-ink text-paper text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition">
+      <span id="heroPlayIcon" class="text-[9px] leading-none ml-[1px]">▶</span>
+      <span id="heroPlayText">Studio Sound — Earth Minerals</span>
+    </button>
+    <audio id="heroAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
+  </div>
   <p class="mt-6 md:mt-8 text-[15px] md:text-[17px] leading-[1.6] text-ink2 max-w-[520px] mx-auto">
    Choose your piece, then select your finish: deep Volcanic Charcoal, raw minimal Clay, or our signature botanical Moonmilk infused with real lavender, basil, and black pepper.
   </p>
   <div class="mt-10 flex justify-center"><div class="w-[1px] h-[56px] bg-gradient-to-b from-ink/20 to-transparent"></div></div>
 </section>
 
-<!-- ETSY SHOP CTA - paste between HERO and SHOP GRID -->
-<section class="max-w- mx-auto px-6 md:px-10 pb-12">
-  <div class="flex flex-col md:flex-row items-center justify-between gap-5 border border-ink/10 rounded- bg-[#faf8f5] px-6 md:px-8 py-6">
+<!-- ETSY SHOP CTA - FIXED -->
+<section class="max-w-[1280px] mx-auto px-6 md:px-10 pb-12">
+  <div class="flex flex-col md:flex-row items-center justify-between gap-5 border border-ink/10 rounded-[20px] bg-[#faf8f5] px-6 md:px-8 py-6">
     <div class="text-center md:text-left">
-      <p class="text- tracking-[0.22em] uppercase font-semibold text-ink2">Also on Etsy • Ready to Ship</p>
-      <p class="mt-2 font-serif text- md:text- leading-[1.2] font-[500]">Prefer to shop with reviews & Etsy Purchase Protection?</p>
-      <p class="mt-1 text- leading-[1.5] text-ink2 max-w-">Same handmade talismans, same finishes — just fulfilled via Etsy.</p>
+      <p class="text-[11px] tracking-[0.22em] uppercase font-semibold text-ink2">Also on Etsy • Ready to Ship • Reviews</p>
+      <p class="mt-2 font-serif text-[20px] md:text-[22px] leading-[1.2] font-[500]">Prefer to shop with Etsy Purchase Protection?</p>
+      <p class="mt-1 text-[13px] leading-[1.5] text-ink2 max-w-[420px]">Same handmade talismans, same finishes — fulfilled via Etsy. No double inventory.</p>
     </div>
     <a href="https://heldandboundco.etsy.com" target="_blank" rel="noopener noreferrer"
-       class="shrink-0 inline-flex items-center justify-center h- px-8 rounded-full bg-ink text-paper text- tracking-[0.16em] uppercase font-semibold hover:bg-zinc-800 transition">
+       class="shrink-0 inline-flex items-center justify-center h-[44px] px-8 rounded-full bg-ink text-paper text-[11px] tracking-[0.16em] uppercase font-semibold hover:bg-zinc-800 transition">
       Shop Etsy Shop →
     </a>
   </div>
 </section>
 
-<!-- SHOP GRID -->
+<!-- GALLERY GRID (was Shop Grid) - Now links to Etsy -->
 <section id="shop" class="max-w-[1280px] mx-auto px-4 md:px-10 pb-24">
   <div class="flex items-end justify-between mb-8 md:mb-12 px-2">
-    <h2 class="font-serif text-[26px] md:text-[32px] font-medium">Choose your piece</h2>
-    <p class="hidden md:block text-[13px] text-ink2 max-w-[380px] text-right">Each piece is finished with your chosen blend, mark and ritual. Image syncs instantly to your color selection.</p>
+    <h2 class="font-serif text-[26px] md:text-[32px] font-medium">Gallery — Choose your piece</h2>
+    <p class="hidden md:block text-[13px] text-ink2 max-w-[380px] text-right">Each piece is finished with your chosen blend, mark and ritual. All pieces live on Etsy.</p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8">
@@ -160,10 +160,10 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Single runes • 25 coins + pouch</p>
+        <a href="https://heldandboundco.etsy.com?search_query=rune+set" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Single runes • 25 coins + pouch • Etsy checkout</p>
       </div>
     </div>
 
@@ -211,10 +211,10 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Choose your mark • Handmade to order</p>
+        <a href="https://heldandboundco.etsy.com?search_query=protection+pendant" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Choose your mark • Etsy checkout</p>
       </div>
     </div>
 
@@ -262,10 +262,10 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Algiz+Othala top seller • Heavy</p>
+        <a href="https://heldandboundco.etsy.com?search_query=incense+holder" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Algiz+Othala top seller • Etsy checkout</p>
       </div>
     </div>
 
@@ -313,10 +313,10 @@ tailwind.config = {
           </div>
         </div>
         
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Door / altar • Jute twine + pouch</p>
+        <a href="https://heldandboundco.etsy.com?search_query=hanging+talisman" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Door / altar • Jute twine + pouch • Etsy</p>
       </div>
     </div>
 
@@ -357,10 +357,10 @@ tailwind.config = {
           </div>
         </div>
 
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Unmarked / Algiz • Thumb divot</p>
+        <a href="https://heldandboundco.etsy.com?search_query=worry+stone" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">3 finishes • Unmarked / Algiz • Thumb divot • Etsy</p>
       </div>
     </div>
 
@@ -397,17 +397,17 @@ tailwind.config = {
             <option value="03">No. 03</option>
           </select>
         </div>
-        <button class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
-          Buy Now <span class="opacity-60">→</span>
-        </button>
-        <p class="mt-3 text-[11px] text-ink2 text-center">1 of 1 • Handmade • Ships in your cream pouch</p>
+        <a href="https://heldandboundco.etsy.com?search_query=one+of+one" target="_blank" rel="noopener noreferrer" class="buy-btn mt-5 w-full h-[48px] rounded-full bg-ink text-paper text-[11px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition flex items-center justify-center gap-2">
+          View on Etsy <span class="opacity-60">→</span>
+        </a>
+        <p class="mt-3 text-[11px] text-ink2 text-center">1 of 1 • Handmade • Ships in your cream pouch • Etsy</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- NEWSLETTER - FIXED -->
+<!-- NEWSLETTER -->
 <section class="bg-white border-y border-line">
   <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-12 md:py-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
     <div>
@@ -442,30 +442,14 @@ tailwind.config = {
   </div>
 </section>
 
-<script>
-  const btn = document.getElementById('earthPlayBtn');
-  const icon = document.getElementById('earthPlayIcon');
-  const audio = document.getElementById('earthAudio');
-  if(btn && audio){
-    audio.volume = 0.35;
-    btn.addEventListener('click', async ()=>{
-      try{
-        if(audio.paused){ await audio.play(); icon.textContent = '❚'; }
-        else{ audio.pause(); icon.textContent = '▶'; }
-      }catch(e){}
-    });
-  }
-</script>
-
 <!-- FOOTER -->
-
 <footer id="footer" class="bg-ink text-paper/70">
   <div class="max-w-[1280px] mx-auto px-6 md:px-10 py-14 md:py-20 grid md:grid-cols-12 gap-10">
     <div class="md:col-span-5">
       <p class="font-serif text-[22px] font-semibold text-paper tracking-[0.02em]">HELD & BOUND</p>
       <p class="mt-3 text-[13px] leading-[1.6] max-w-[380px]">Botanical • Symbolic • Small Batch. Hand-formed ritual art made with intention, botanical materials and bind runes.</p>
       <p class="mt-6 text-[11px] tracking-[0.12em] uppercase">© <span id="year"></span> Held & Bound — Handmade to order in UK</p>
-      <p class="mt-3 text-[11px] leading-[1.5] opacity-60">Cheshire, UK<br>hello@humanlabofficial.com • Prices in GBP £</p>
+      <p class="mt-3 text-[11px] leading-[1.5] opacity-60">Cheshire, UK<br>hello@humanlabofficial.com • Prices in GBP £ • <a href="https://heldandboundco.etsy.com" target="_blank" class="underline">Shop on Etsy</a></p>
     </div>
     <div class="md:col-span-3">
       <p class="text-[11px] tracking-[0.14em] uppercase font-semibold text-paper mb-4">Shipping Info</p>
@@ -476,7 +460,7 @@ tailwind.config = {
       <p class="text-[13px] leading-[1.6]"><strong class="text-paper font-medium">Standard:</strong> 14 days to cancel from delivery (UK Consumer Contracts Regs). Email within 14 days, return unused within 14 days. You pay return postage.<br><br><strong class="text-paper font-medium">Bespoke:</strong> Blend + bind rune choices are bespoke per Reg 28 — no 14-day cancellation once production started. Still replaceable if damaged/defective.<br><br><strong class="text-paper font-medium">One-Off:</strong> Final sale except damaged/defective. Photo within 48h to hello@heldandbound.com</p>
       <div class="mt-6 flex flex-wrap gap-x-5 gap-y-2 text-[11px] tracking-[0.12em] uppercase">
         <a href="mailto:hello@heldandbound.com" class="underline underline-offset-4 hover:text-paper transition">Contact</a>
-        <a href="#" class="underline underline-offset-4 hover:text-paper transition">Instagram</a>
+        <a href="https://heldandboundco.etsy.com" target="_blank" class="underline underline-offset-4 hover:text-paper transition">Etsy Shop</a>
         <a href="/terms.html" class="underline underline-offset-4 hover:text-paper transition">Terms</a>
         <a href="/privacy.html" class="underline underline-offset-4 hover:text-paper transition">Privacy</a>
         <a href="/shipping-returns.html" class="underline underline-offset-4 hover:text-paper transition">Shipping & Returns</a>
@@ -485,7 +469,6 @@ tailwind.config = {
   </div>
 </footer>
 
-
 <!-- TOAST -->
 <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden bg-ink text-paper text-[12px] px-5 py-3 rounded-full shadow-xl border border-white/10"></div>
 
@@ -493,139 +476,77 @@ tailwind.config = {
 // Year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// --- STRIPE LINKS LOOKUP TABLE - REPLACE WITH YOUR REAL PAYMENT LINKS ---
-const stripeLinks = {
-  // Pendants - 4 variants
-  "pendants-protection-charcoal": "https://buy.stripe.com/test_pendants_protection_charcoal",
-  "pendants-protection-moonmilk": "https://buy.stripe.com/test_pendants_protection_moonmilk",
-  "pendants-abundance-charcoal": "https://buy.stripe.com/test_pendants_abundance_charcoal",
-  "pendants-abundance-moonmilk": "https://buy.stripe.com/test_pendants_abundance_moonmilk",
-
-  // Rune Sets - 2 variants (color only)
-  "rune-set-charcoal": "https://buy.stripe.com/test_rune_set_charcoal",
-  "rune-set-moonmilk": "https://buy.stripe.com/test_rune_set_moonmilk",
-
-  // Incense Holders - 4 variants
-  "incense-holders-sacred-space-charcoal": "https://buy.stripe.com/test_incense_sacred_charcoal",
-  "incense-holders-sacred-space-moonmilk": "https://buy.stripe.com/test_incense_sacred_moonmilk",
-  "incense-holders-abundance-charcoal": "https://buy.stripe.com/test_incense_abundance_charcoal",
-  "incense-holders-abundance-moonmilk": "https://buy.stripe.com/test_incense_abundance_moonmilk",
-
-  // Worry Stones - 2 variants
-  "worry-stones-charcoal": "https://buy.stripe.com/test_worry_charcoal",
-  "worry-stones-moonmilk": "https://buy.stripe.com/test_worry_moonmilk",
-
-  // Hanging Talismans - 4 variants
-  "hanging-talismans-protection-charcoal": "https://buy.stripe.com/test_hanging_protection_charcoal",
-  "hanging-talismans-protection-moonmilk": "https://buy.stripe.com/test_hanging_protection_moonmilk",
-  "hanging-talismans-home-protection-charcoal": "https://buy.stripe.com/test_hanging_home_charcoal",
-  "hanging-talismans-home-protection-moonmilk": "https://buy.stripe.com/test_hanging_home_moonmilk",
-
-  // One-Off Pieces - individual pieces
-  "clay-one-off-01": "https://buy.stripe.com/test_oneoff_01",
-  "clay-one-off-02": "https://buy.stripe.com/test_oneoff_02",
-  "clay-one-off-03": "https://buy.stripe.com/test_oneoff_03",
-  "clay-one-off-04": "https://buy.stripe.com/test_oneoff_04"
-};
-
-// Helper to normalize intention values to lookup keys
-function normalizeIntention(val){
-  if(!val) return '';
-  val = val.toLowerCase();
-  if(val.includes('home') && val.includes('protection')) return 'home-protection';
-  if(val.includes('protection') || val === 'algiz') return 'protection';
-  if(val.includes('abundance') || val.includes('fehu')) return 'abundance';
-  if(val.includes('sacred')) return 'sacred-space';
-  return val;
-}
-
+// Carousel logic
 document.querySelectorAll('.product-card').forEach(card => {
-  const productId = card.dataset.product;
   const track = card.querySelector('.carousel-track');
   const dots = card.querySelectorAll('.dot');
   const prevBtn = card.querySelector('.carousel-prev');
   const nextBtn = card.querySelector('.carousel-next');
   const colorSelect = card.querySelector('.color-select');
-  const intentionSelect = card.querySelector('.intention-select');
-  const pieceSelect = card.querySelector('.piece-select');
-  const buyBtn = card.querySelector('.buy-btn');
   const carousel = card.querySelector('.carousel');
 
+  if(!track) return;
+
   let currentIndex = 0;
-  const total = track ? track.children.length : 2;
+  const total = track.children.length;
   const isThree = total === 3;
 
   function updateCarousel(index){
     currentIndex = Math.max(0, Math.min(total-1, index));
-    if(track){
-      if(isThree){
-        track.style.transform = `translateX(-${currentIndex * 33.333}%)`;
-      } else {
-        track.style.transform = `translateX(-${currentIndex * 50}%)`;
-      }
+    if(isThree){
+      track.style.transform = `translateX(-${currentIndex * 33.333}%)`;
+    } else {
+      track.style.transform = `translateX(-${currentIndex * 50}%)`;
     }
     dots.forEach((dot,i)=>{
       dot.className = `dot w-1.5 h-1.5 rounded-full transition-all ${i===currentIndex ? 'bg-ink w-3' : 'bg-ink/30'}`;
     });
-    // Sync color dropdown to carousel
     if(colorSelect){
-      const colorValue = currentIndex === 0 ? 'charcoal' : 'moonmilk';
-      if(colorSelect.value !== colorValue){
+      const colorValue = currentIndex === 0 ? 'charcoal' : currentIndex === 1 ? 'moonmilk' : 'clay';
+      if([...colorSelect.options].some(o=>o.value===colorValue)){
         colorSelect.value = colorValue;
       }
     }
   }
 
-  // Color dropdown -> image syncing (REQUIRED)
   if(colorSelect){
     colorSelect.addEventListener('change', (e)=>{
       const val = e.target.value;
-      const idx = val === 'moonmilk' ? 1 : 0;
+      let idx = 0;
+      if(val === 'moonmilk') idx = 1;
+      else if(val === 'clay') idx = 2;
       updateCarousel(idx);
     });
   }
 
-  // Arrows
   if(prevBtn) prevBtn.addEventListener('click', ()=> updateCarousel(currentIndex - 1));
   if(nextBtn) nextBtn.addEventListener('click', ()=> updateCarousel(currentIndex + 1));
 
-  // Touch + pointer swipe support
-  // Uses Pointer Events so swipe works on modern phones, tablets and desktop trackpads/mice.
-  // Vertical page scrolling is preserved with touch-action: pan-y.
   if(carousel && track){
     carousel.style.touchAction = 'pan-y';
     carousel.style.cursor = 'grab';
-
     let startX = 0;
     let currentX = 0;
     let isDragging = false;
     let pointerId = null;
 
-    function slidePercent(){
-      return isThree ? 33.333333 : 50;
-    }
-
+    function slidePercent(){ return isThree ? 33.333333 : 50; }
     function dragTranslate(diff){
       const step = slidePercent();
       const percent = (diff / carousel.clientWidth) * step;
       const baseTranslate = -currentIndex * step;
       track.style.transform = `translateX(${baseTranslate + percent}%)`;
     }
-
     function finishSwipe(){
       if(!isDragging) return;
-
       const diff = currentX - startX;
       isDragging = false;
-
       if(pointerId !== null){
         try { carousel.releasePointerCapture(pointerId); } catch(e) {}
       }
       pointerId = null;
-
       track.style.transition = 'transform 0.45s cubic-bezier(0.32,0.72,0,1)';
       carousel.style.cursor = 'grab';
-
       if(Math.abs(diff) > 40){
         if(diff < 0) updateCarousel(currentIndex + 1);
         else updateCarousel(currentIndex - 1);
@@ -633,38 +554,27 @@ document.querySelectorAll('.product-card').forEach(card => {
         updateCarousel(currentIndex);
       }
     }
-
     carousel.addEventListener('pointerdown', (e)=>{
-      // Only start a swipe for the primary pointer.
       if(e.isPrimary === false) return;
-
-      // Don't hijack clicks/drags originating from form controls.
       if(e.target.closest('button, select, input, textarea, a')) return;
-
       startX = e.clientX;
       currentX = e.clientX;
       isDragging = true;
       pointerId = e.pointerId;
-
       track.style.transition = 'none';
       carousel.style.cursor = 'grabbing';
-
       try { carousel.setPointerCapture(pointerId); } catch(err) {}
     });
-
     carousel.addEventListener('pointermove', (e)=>{
       if(!isDragging || e.pointerId !== pointerId) return;
-
       currentX = e.clientX;
       dragTranslate(currentX - startX);
     });
-
     carousel.addEventListener('pointerup', (e)=>{
       if(e.pointerId !== pointerId) return;
       currentX = e.clientX;
       finishSwipe();
     });
-
     carousel.addEventListener('pointercancel', ()=>{
       if(!isDragging) return;
       isDragging = false;
@@ -673,58 +583,36 @@ document.querySelectorAll('.product-card').forEach(card => {
       carousel.style.cursor = 'grab';
       updateCarousel(currentIndex);
     });
-
     carousel.addEventListener('lostpointercapture', ()=>{
       if(!isDragging) return;
       finishSwipe();
     });
-
-    // Prevent the browser's native image drag from interfering with swipes.
-    carousel.querySelectorAll('img').forEach(img=>{
-      img.draggable = false;
-    });
+    carousel.querySelectorAll('img').forEach(img=>{ img.draggable = false; });
   }
-
-  // Stripe Buy Now logic
-  if(buyBtn){
-    buyBtn.addEventListener('click', ()=>{
-      const color = colorSelect ? colorSelect.value : 'charcoal';
-      const intentionRaw = intentionSelect ? intentionSelect.value : '';
-      const intention = normalizeIntention(intentionRaw);
-      const piece = pieceSelect ? pieceSelect.value : '';
-
-      let key = '';
-      if(productId === 'one-off' || productId === 'clay-one-off'){
-        key = `${productId}-${piece}`;
-      } else if(productId === 'pendants'){
-        key = `${productId}-${intention}-${color}`;
-      } else if(productId === 'incense-holders'){
-        key = `${productId}-${intention}-${color}`;
-      } else if(productId === 'hanging-talismans'){
-        key = `${productId}-${intention}-${color}`;
-      } else {
-        // rune-set and worry-stones have only color
-        key = `${productId}-${color}`;
-      }
-
-      const url = stripeLinks[key];
-      if(!url || url.includes('REPLACE') || url.includes('test_')){
-        // Show toast with key so user knows what to replace
-        showToast(`Stripe link missing for ${key} — replace in stripeLinks object`);
-        console.log('Stripe lookup key:', key, 'URL:', url);
-        // For demo, still allow redirect if placeholder exists
-        if(url){
-          setTimeout(()=>{ window.location.href = url; }, 800);
-        }
-        return;
-      }
-      window.location.href = url;
-    });
-  }
-
-  // Init
   updateCarousel(0);
 });
+
+// Hero audio - FIXED IDs
+const heroBtn = document.getElementById('heroPlayBtn');
+const heroIcon = document.getElementById('heroPlayIcon');
+const heroText = document.getElementById('heroPlayText');
+const heroAudio = document.getElementById('heroAudio');
+if(heroBtn && heroAudio){
+  heroAudio.volume = 0.35;
+  heroBtn.addEventListener('click', async ()=>{
+    try{
+      if(heroAudio.paused){
+        await heroAudio.play();
+        heroIcon.textContent = '❚❚';
+        heroText.textContent = 'Playing — Earth Minerals';
+      } else {
+        heroAudio.pause();
+        heroIcon.textContent = '▶';
+        heroText.textContent = 'Studio Sound — Earth Minerals';
+      }
+    }catch(e){}
+  });
+}
 
 function showToast(msg){
   const toast = document.getElementById('toast');
@@ -737,24 +625,6 @@ function showToast(msg){
     toast.style.transform = 'translate(-50%, 20px)';
     setTimeout(()=> toast.classList.add('hidden'), 300);
   }, 3000);
-}
-  const heroBtn = document.getElementById('heroPlayBtn');
-const heroIcon = document.getElementById('heroPlayIcon');
-const heroText = document.getElementById('heroPlayText');
-const heroAudio = document.getElementById('heroAudio');
-if(heroBtn && heroAudio){
-  heroAudio.volume = 0.35;
-  heroBtn.addEventListener('click', async ()=>{
-    if(heroAudio.paused){
-      await heroAudio.play();
-      heroIcon.textContent = '❚❚';
-      heroText.textContent = 'Playing — Earth Minerals';
-    } else {
-      heroAudio.pause();
-      heroIcon.textContent = '▶';
-      heroText.textContent = 'Studio Sound — Earth Minerals';
-    }
-  });
 }
 </script>
 </body>
