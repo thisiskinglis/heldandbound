@@ -61,62 +61,57 @@ tailwind.config = {
 </head>
 <body class="bg-paper text-ink font-sans selection:bg-ink selection:text-paper">
 
-<!-- HEADER -->
-<header class="sticky top-0 z-40 bg-paper/90 backdrop-blur-xl border-b border-line">
-  <div class="max-w-[1280px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
-    <div class="flex items-center gap-10">
-      <a href="#" class="font-serif text-[22px] font-semibold tracking-[0.02em]">HELD & BOUND</a>
-      <nav class="hidden md:flex items-center gap-8 text-[11px] tracking-[0.14em] uppercase font-medium text-ink2">
-        <a href="#shop" class="hover:text-ink transition">Shop</a>
-        <a href="#process" class="hover:text-ink transition">Our Process</a>
-        <a href="#footer" class="hover:text-ink transition">Shipping</a>
-      </nav>
-    </div>
-    <div class="flex items-center gap-4">
-      <span class="hidden md:inline text-[10px] tracking-[0.18em] uppercase font-semibold text-ink2">RUNE SETS • PENDANTS • INCENSE HOLDERS • TALISMANS</span>
-      <div class="w-8 h-8 rounded-full bg-ink text-paper flex items-center justify-center text-[10px] font-medium">HB</div>
-    </div>
-  </div>
+<header class="border-b border-line bg-paper/80 backdrop-blur sticky top-0 z-40">
+<div class="max-w-[1280px] mx-auto px-6 md:px-10 h-[72px] flex items-center justify-between">
+<div class="flex items-center gap-10">
+<a href="#" class="font-serif text-[22px] font-semibold tracking-[0.02em]">HELD & BOUND</a>
+<nav class="hidden md:flex items-center gap-8 text-[11px] tracking-[0.14em] uppercase font-medium text-ink2">
+<a href="#shop" class="hover:text-ink transition">Shop</a>
+<a href="#process" class="hover:text-ink transition">Our Process</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden md:inline text-[10px] tracking-[0.18em] uppercase font-semibold text-ink2">RUNE SETS • PENDANTS • INCENSE HOLDERS • TALISMANS</span>
+<div class="w-8 h-8 rounded-full bg-ink text-paper flex items-center justify-center text-[10px] font-medium">HB</div>
+</div>
+</div>
 </header>
 
-<!-- HERO IMAGE - Added - hero.png must be in root -->
-<div class="mt-10 md:mt-14 max-w- mx-auto">
-  <img src="hero.png" alt="Held & Bound - handcrafted botanical clay ritual art" class="w-full h- md:h- object-cover rounded- border border-line shadow-sm">
+<!-- HERO -->
+<section class="max-w-[1280px] mx-auto px-6 md:px-10 pt-16 md:pt-28 pb-8 text-center">
+<p class="text-[11px] tracking-[0.22em] uppercase font-semibold text-ink2 mb-6">Four Objects • Two Blends • Your Mark</p>
+<h1 class="font-serif text-[42px] md:text-[72px] leading-[0.9] font-[500] tracking-[-0.02em] max-w-[760px] mx-auto">
+Hand-formed,<br>ritual art made with <em class="font-[400] italic">intention.</em>
+</h1>
+</section>
+
+<!-- HERO IMAGE FULL BLEED EDGE TO EDGE WITH TEXT OVERLAY -->
+<div class="w-full relative">
+<img src="hero.png" alt="Held & Bound - handcrafted ritual art with wolf and lion guardians" class="w-full h-[68vw] md:h-[46vw] max-h-[780px] min-h-[420px] object-cover block">
+<!-- subtle dark wash for text readability -->
+<div class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/35"></div>
+<!-- HORIZONTAL TEXT ON IMAGE -->
+<div class="absolute inset-0 flex items-center justify-center px-6">
+<p class="flex flex-wrap justify-center items-center gap-x-4 md:gap-x-8 gap-y-2 text-center text-paper">
+<span class="text-[11px] md:text-[12px] tracking-[0.28em] uppercase font-semibold">HANDCRAFTED</span>
+<span class="hidden md:block w-[1px] h-[14px] bg-paper/50"></span>
+<span class="font-serif text-[18px] md:text-[22px] leading-none italic font-[400]">Made with meaning.</span>
+<span class="hidden md:block w-[1px] h-[14px] bg-paper/50"></span>
+<span class="font-serif text-[18px] md:text-[22px] leading-none italic font-[400]">Made to be held.</span>
+</p>
+</div>
 </div>
 
-<!-- Dark gradient for legibility -->
-  <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-black/20 to-black/35 pointer-events-none"></div>
-
-  <!-- Centered horizontal text line ON image -->
-  <div class="absolute inset-0 flex items-center justify-center px-6 pointer-events-none">
-    <div class="flex flex-wrap items-center justify-center gap-x-3 md:gap-x-5 gap-y-1 
-                text-[#F9F5EF] text-[11px] md:text-[13px] tracking-[0.18em] uppercase font-medium
-                drop-shadow-[0_1px_8px_rgba(0,0,0,0.5)]">
-      <span class="font-semibold tracking-[0.22em]">HANDCRAFTED</span>
-      <span class="opacity-60 text-[10px]">—</span>
-      <span class="font-serif normal-case tracking-[0.02em] text-[13px] md:text-[15px] lowercase italic">Made with meaning.</span>
-      <span class="opacity-60 text-[10px]">—</span>
-      <span class="font-serif normal-case tracking-[0.02em] text-[13px] md:text-[15px] lowercase italic">Made to be held.</span>
-    </div>
-  </div>
-</div>`;function _i(){let[e,t]=jd.useState(!1);return B("div",{className:"min-h-screen bg-[#F9F5EF] text-[#1C1917] antialiased selection:bg-[#1C1917] selection:text-[#F9F5EF]",children:[Q("style",{children:`
-        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Inter:wght@400;500;600&display=swap');
-        .font-serif { font-family: 'Cormorant Garamond', serif; }
-        .font-sans { font-family: 'Inter', sans-serif; }
-      `}),Q("div",{className:"sticky top-0 z-50 border-b border-black/10 bg-[#F9F5EF]/90 backdrop-blur supports-[backdrop-filter]:bg-[#F9F5EF]/80",children:B("div",{className:"h-[56px] md:h-[64px] px-5 md:px-8 flex items-center justify-between gap-4",children:[B("div",{className:"flex items-center gap-4 min-w-0",children:[Q("span",{className:"font-serif text-[16px] md:text-[19px] font-semibold tracking-[0.02em] whitespace-nowrap",children:"HELD & BOUND"}),Q("span",{className:"hidden md:inline-block w-[1px] h-[16px] bg-black/15"}),Q("span",{className:"text-[10px] md:text-[11px] tracking-[0.18em] uppercase font-medium text-[#57534E] truncate",children:"Text on Hero — Horizontal Line"})]}),B("div",{className:"flex items-center gap-2 shrink-0",children:[Q("button",{onClick:()=>{navigator.clipboard?.writeText(Li).then(()=>{t(!0),setTimeout(()=>t(!1),2000)})},className:"h-8 px-3.5 rounded-full border border-black/10 text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-black hover:text-[#F9F5EF] transition",children:e?"Copied ✓":"Copy Code"}),Q("button",{onClick:()=>{let l=`<!DOCTYPE html>
-<html lang="en">
-<head>
-
-<!-- TINY BLACK BUTTON - Earth Minerals -->
-  <!-- TINY BLACK BUTTON - Earth Minerals -->
-  <div class="mt-7 flex justify-center">
-    <button id="heroPlayBtn" class="h-[28px] inline-flex items-center gap-2 px-4 rounded-full bg-ink text-paper text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition">
-      <span id="heroPlayIcon" class="text-[9px] leading-none ml-[1px]">▶</span>
-      <span id="heroPlayText">Studio Sound — Earth Minerals</span>
-    </button>
-    <audio id="heroAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
-  </div>
-  <div class="mt-10 flex justify-center"><div class="w-[1px] h-[56px] bg-gradient-to-b from-ink/20 to-transparent"></div></div>
+<!-- HERO AUDIO + LINE -->
+<section class="max-w-[1280px] mx-auto px-6 md:px-10 pt-10 pb-12 md:pb-20 text-center">
+<div class="flex justify-center">
+<button id="heroPlayBtn" class="h-[28px] inline-flex items-center gap-2 px-4 rounded-full bg-ink text-paper text-[10px] tracking-[0.14em] uppercase font-semibold hover:bg-zinc-800 transition">
+<span id="heroPlayIcon" class="text-[9px] leading-none ml-[1px]">▶</span>
+<span id="heroPlayText">Studio Sound — Earth Minerals</span>
+</button>
+<audio id="heroAudio" src="audio/earth-minerals.mp3" loop preload="none"></audio>
+</div>
+<div class="mt-10 flex justify-center"><div class="w-[1px] h-[56px] bg-gradient-to-b from-ink/20 to-transparent"></div></div>
 </section>
  
 <!-- ABOUT - Held & Bound - True Story -->
